@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta name="description" content="Solutions to Linear Algebra Done Right 3rd version, Chapter 3, exercise 3A"/>
+<link rel="canonical" href="http://linearalgebras.com/3A.html" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Solutions to Linear Algebra Done Right Chapter 3 exercise 3A" />
+<meta property="og:description" content="Solutions to Linear Algebra Done Right 3rd version, Chapter 3, exercise 3A" />
+<meta property="og:url" content="http://linearalgebras.com/3A.html" />
+<meta property="og:site_name" content="Solutions to Linear Algebra Done Right 3rd Edition" />
+<meta property="article:tag" content="Chapter 3" />
+<meta property="article:tag" content="Solution" />
+<meta property="article:section" content="Linear Algebra" />
+<meta property="article:published_time" content="2014-12-07T15:53:58+00:00" />
+<meta property="article:modified_time" content="2015-05-09T11:11:19+00:00" />
+<meta property="og:updated_time" content="2015-05-09T11:11:19+00:00" />
+
+<title>Solutions to Linear Algebra Done Right 3rd Edition</title>
+
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+
+</head>
+
+<body>
+<h1>Solutions to Linear Algebra Done Right 3rd Edition</h1>
+
+<h2 align="right">Chapter 3 Exercise A</h2>
+<hr/>
+<p>1. Suppose $b,c\in \R$. Define $T: \R^3 \to \R^2$ by \[T(x, y, z)= (2x-4y +3z + b,6x +cxyz).\] Show that $T$ is linear if and only if $b=c=0$.</p>
+<p>Solution: If $T$ is linear, then \[(0,0)=T(0,0,0)=(b,0)\]by 3.11, hence $b=0$. We also have \[T(1,1,1)=T(1,1,0)+T(0,0,1),\]it is equivalent to \[(1+b,6+c)=(b-2,6)+(3+b,0)=(1+2b,6).\]Thus $6+c=6$ implies $c=0$.</p>
+<p>Conversely, if $b=c=0$, $T$ is obviously linear. See 3.4 or Problem 3.</p>
+<blockquote><p>You may consider a linear map only has linear terms, hence the terms like $xyz$ is impossible.</p></blockquote>
+<hr />
+<p>2. Suppose $b,c\in\R$. Define $T:\ca P(\R)\to \R^2$ by \[Tp=(3p(4)+5p'(6)+bp(1)p(2),\int_{-1}^2x^3p(x)dx+c\sin p(0)).\] Show that $T$ is linear if and only if $b=c=0$.</p>
+<p>Solution: We show that if $b=c=0$, then $T$ is linear. Let $f,g\in \ca P(\R)$, then we have \[(f+g)(4)=f(4)+g(4)\]and \[(f+g)'(4)=f'(4)+g'(4).\]It is easy to check. Moreover, by linearity of integration, one has \[\int_{-1}^2x^3(f+g)(x)dx=\int_{-1}^2x^3(f(x)+g(x))dx=\int_{-1}^2x^3f(x)dx+\int_{-1}^2x^3g(x)dx.\] By the above, it follows that \begin{align*} T(f+g)=&amp;(3(f+g)(4)+5(f+g)'(6),\int_{-1}^2x^3(f+g)(x)dx)\\ =&amp;(3f(4)+5f'(6),\int_{-1}^2x^3f(x)dx)+(3g(4)+5g'(6),\int_{-1}^2x^3g(x)dx)\\ =&amp;Tf+Tg. \end{align*} Similarly, we can check that $T(\lambda f)=\lambda Tf$ for any $\lambda\in \R$ and $f\in \ca P(\R)$. Conversely, denote the linear map above by $S$. Then by Problem 5, it follows that $T-S$ is a linear map. That means \[(T-S)p=(bp(1)p(2),c\sin p(0))\]is linear. Consider $f(x)=\pi/2$ and $g(x)=\pi/2$, then $f,g\in\ca P(\R)$. We have \[ (T-S)(f+g)=(b\pi^2,c\sin \pi)=(b\pi^2,0) \]and \[ (T-S)f+(T-S)g=(b\pi^2/2,c)+(b\pi^2/2,c)=(b\pi^2/2,2c). \]Thus, we should have \[(b\pi^2,0)=(b\pi^2/2,2c).\]It follows that $b=c=0$.</p>
+<blockquote><p>We do not really need Problem 5, we need them just for simplifying computation.</p></blockquote>
+<hr />
+<p>3. Suppose $T\in \ca L(\mb F^n,\mb F^m)$. Show that there exist scalars $A_{j,k}\in\mb F$ for $j=1,\cdots,m$ and $k=1,\cdots,n$ such that \[ T(x_1,\cdots,x_n)=(A_{1,1}x_1+\cdots+A_{1,n}x_n,\cdots,A_{m,1}x_1+\cdots+A_{m,n}x_n)\] for every $(x_1,\cdots,x_n)\in \mb F^n$. [The exercise above shows that $T$ has the form promised in the last item of Example 3.4.]</p>
+<p>Solution: If we denote \[ T(1,0,\cdots,0)=(A_{1,1},\cdots,A_{m,1}), \]\[ T(0,1,\cdots,0)=(A_{1,2},\cdots,A_{m,2}), \]\[\cdots\cdots\]and\[ T(0,0,\cdots,0,1)=(A_{1,n},\cdots,A_{m,n}). \]Note that $(1,0,\cdots,0)$, $(0,1,\cdots,0)$, $\cdots$ and $(0,\cdots,0,1)$ is a basis of $\mb F^n$, then by the proof of 3.5 we conclude that \[ T(x_1,\cdots,x_n)=(A_{1,1}x_1+\cdots+A_{1,n}x_n,\cdots,A_{m,1}x_1+\cdots+A_{m,n}x_n). \]</p>
+<hr />
+<p>4. Suppose $T\in\ca L(V,W)$ and $v_1$, $\cdots$, $v_m$ is a list of vectors in $V$ such that $T v_1$, $\cdots$, $T v_m$ is a linearly independent list in $W$. Prove that $v_1$, $\cdots$, $v_m$ is linearly independent.</p>
+<p>Solution: Suppose there are $a_1$, $\cdots$, $a_m\in\mb F$ such that \[0=a_1v_1+\cdots+a_mv_m,\]then \[0=T(a_1v_1+\cdots+a_mv_m)=a_1Tv_1+\cdots+a_mTv_m.\]Note that $T v_1$, $\cdots$, $T v_m$ is linearly independent, it follows that \[ a_1=\cdots=a_m=0, \]thus $v_1$, $\cdots$, $v_m$ is linearly independent.</p>
+<hr />
+<p>5. Prove the assertions in 3.7.</p>
+<p>Solution: It suffices to show that $T+S$ and $\lambda T$ are linear maps provided $T$ and $S$ are linear maps, where $\lambda \in\mb F$. Then $\ca L(V,W)$ is closed under addition and scalar multiplication, hence is a vector space.</p>
+<p>For any $u,v\in V$, we have \begin{align*} (T+S)(u+v)=&amp;T(u+v)+S(u+v)=Tu+Tv+Su+Sv\\ =&amp;(Tu+Su)+(Tv+Sv)=(T+S)u+(T+S)v. \end{align*} The first and last equality hold by the definitions in 3.6, the second equality holds since $T$ and $S$ are linear maps. Similarly, for $\eta\in\mb F$, \begin{align*} (T+S)(\eta u)=&amp;T(\eta u)+S(\eta u)=\eta Tu+\eta Su\\ =&amp;\eta(Tu+Su)=\eta(T+S)u. \end{align*} Combining these arguments, it follows that $T+S$ is a linear map. Again, for any $u,v\in V$, we have \begin{align*} (\lambda T)(u+v)=&amp;\lambda (T(u+v))=\lambda (Tu+Tv)\\ =&amp;\lambda (Tu)+\lambda (Tv)=(\lambda T)u+(\lambda T)v. \end{align*} The first and last equality hold by the definitions in 3.6, the second equality holds since $T$ is a linear map. Similarly, for $\eta\in\mb F$, \begin{align*} (\lambda T)(\eta u)=&amp;\lambda(T(\eta u))=\lambda(\eta T( u))\\ =&amp;\lambda\eta(Tu)=\eta(\lambda Tu)=\eta(\lambda T)u. \end{align*} Combining these arguments, it follows that $\lambda T$ is a linear map.</p>
+<hr />
+<p>6. Prove the assertions in 3.9.</p>
+<p>Solution: Associativity: by definition, for any $x\in V$, we have \[ ((T_1T_2)T_3)x=(T_1T_2)(T_3x)=T_1(T_2(T_3x)), \]while \[ (T_1(T_2T_3))x=T_1((T_2T_3)x)=T_1(T_2(T_3x)). \]Hence $((T_1T_2)T_3)x=(T_1(T_2T_3))x$ for any $x\in V$, therefore $(T_1T_2)T_3=T_1(T_2T_3)$.</p>
+<p>Identity: for any $x\in V$, we have \[ (TI)x=T(Ix)=Tx \]while\[(IT)x=I(Tx)=Tx.\]Hence $(IT)x=(TI)x=Tx$ for any $x\in V$, therefore $IT=TI=T$.</p>
+<p>Distributive properties: we only show $(S_1+S_2)T=S_1T+S_2T$. For any $u\in U$, we have \[ ((S_1+S_2)T)u=(S_1+S_2)(Tu)=S_1(Tu)+S_2(Tu), \]while \[ (S_1T+S_2T)u=(S_1T)u+(S_2T)u=S_1(Tu)+S_2(Tu). \] Hence $((S_1+S_2)T)u=(S_1T+S_2T)u$ for any $u\in U$, therefore $(S_1+S_2)T=S_1T+S_2T$. Similarly, we can show $S(T_1+T_2)=ST_1+ST_2$.</p>
+<hr />
+<p>7. Show that every linear map from a 1-dimensional vector space to itself is multiplication by some scalar. More precisely, prove that if $\dim V = 1$ and $T \in\ca L(V, V) $, then there exists $\lambda\in\mb F$ such that $T v =\lambda v$ for all $v \in V$.</p>
+<p>Solution: See <a title="Linear Algebra Done Right Solution Manual " href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=0CB8QFjAA&amp;url=http%3A%2F%2Fmath-test.googlecode.com%2Ffiles%2FLinear%2520Algebra%2520Done%2520Right%25202e%2520Solutions%2520Manual.pdf&amp;ei=LwbPVM_BOobpoASBo4GoDw&amp;usg=AFQjCNEyhX3mkQSiAud6C__SWg2_gDOyzA&amp;sig2=KRymPt4Z7Z9GSKF6Wa1FMA" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 3 Problem 1.</p>
+<hr />
+<p>8. Give an example of a function $\vp:\R^2\to\R$ such that\[\vp(av)=av\] for all $a\in\R$ and all $v\in \R^2$ but $\vp$ is not linear.[<em>The exercise above and the next exercise show that neither homogeneity nor additivity alone is enough to imply that a function is a linear map</em>.]</p>
+<p>Solution: See <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=0CB8QFjAA&amp;url=http%3A%2F%2Fmath-test.googlecode.com%2Ffiles%2FLinear%2520Algebra%2520Done%2520Right%25202e%2520Solutions%2520Manual.pdf&amp;ei=LwbPVM_BOobpoASBo4GoDw&amp;usg=AFQjCNEyhX3mkQSiAud6C__SWg2_gDOyzA&amp;sig2=KRymPt4Z7Z9GSKF6Wa1FMA" target="_blank" rel="nofollow">Linear Algebra Done Right Solution Manual</a> Chapter 3 Problem 2.</p>
+<hr />
+<p>9. Give an example of a function $\vp:\C\to\C$ such that \[\vp(w+z)=\vp(w)+\vp(z)\] for all $w,z\in\mb C$ but $\vp$ is not linear. (Here $\C$ is thought of as a complex vector space.) [There also exists a function $\vp:\R\to\R$ such that $\R$ satisfies the additivity condition above but $vp$ is not linear. However, showing the existence of such a function involves considerably more advanced tools.]</p>
+<p>Solution: Consider the function defined by $\vp(a+bi)=a$, where $a,b\in\R$. If $w=\alpha_1+\beta_1 i$ and $z=\alpha_2+\beta_2 i$, where $\alpha_1$, $\alpha_2$, $\beta_1$ and $\beta_2$ are real numbers, then we have \[\vp(w+z)=\vp(\alpha_1+\beta_1 i+\alpha_2+\beta_2 i)=\alpha_1+\alpha_2=\vp(w)+\vp(z).\]However, \[i\vp(1)=i\ne \vp(i\cdot 1)=0,\]hence $\vp$ is not linear over $\C$.</p>
+<blockquote><p>For $\vp:\R\to\R$ case, please see <a title="On sort-of-linear functions" href="http://math.stackexchange.com/questions/16175/on-sort-of-linear-functions" target="_blank">On sort-of-linear functions</a>.</p></blockquote>
+<hr />
+<p>10. Suppose $U$ is a subspace of $V$ with $U\ne V$. Suppose $S\in \ca L(U,W) $ and $S\ne 0$ (which means that $Su\ne 0$ for some $u \in U$). Define $T: V \to W$ by\[ Tv=\left\{ \begin{array}{ll} Sv, &amp; \hbox{if $v\in U$,} \\ 0, &amp; \hbox{if $v\in V$ and $v\notin U$.} \end{array} \right. \] Prove that $T$ is not a linear map on $V$.</p>
+<p>Solution: Note that $U\ne V$ and $S\ne 0$, we can choose $u\in U$ such that $Su\ne0$ and $v\in V$ but $v\notin U$, then $u+v\notin U$. Otherwise \[v=(u+v)-u\in U\]will yield a contradiction. Hence $T(u+v)=0$ by definition. On the other hand, $Tu+Tv=Su\ne 0$. It follows that $T(u+v)\ne Tu+Tv$, hence $T$ is not a linear map on $V$.</p>
+<hr />
+<p>11. Suppose $V$ is finite-dimensional. Prove that every linear map on a subspace of $V$ can be extended to a linear map on $V$. In other words, show that if $U$ is a subspace of $V$ and $S\in \ca L(U,W)$, then there exists $T\in \ca L(V,W)$ such that $Tu=Su$ for all $u\in U$.</p>
+<p>Solution: Let $u_1$, $\cdots$, $u_m$ be a basis of $U$, then we can extend it to a basis of $V$ by 2.33. That is $u_1$, $\cdots$, $u_m$, $v_{m+1}$, $\cdots$, $v_n$ is a basis of $V$. Define $T\in \ca L(V,W)$ as below \[Tu_i=Su_i,\quad Tv_{j}=0, \quad 1\le i\le m, m+1\le j \le n.\]The existence of $T$ is guaranteed by 3.5(unique). Then for any $u=a_1u_1+\cdots+a_mu_m$, $a_i\in\mb F$, we have \begin{align*} Tu=&amp;T(a_1u_1+\cdots+a_mu_m)\\ =&amp;a_1Tu_1+\cdots+a_mTu_m\\ =&amp;a_1Su_1+\cdots+a_mSu_m\\ =&amp;S(a_1u_1+\cdots+a_mu_m)=Su. \end{align*}</p>
+<hr />
+<p>12. Suppose $V$ is finite-dimensional with $\dim V &gt; 0$, and suppose $W$ is infinite-dimensional. Prove that $\ca L(V,W)$ is infinite-dimensional.</p>
+<p>Solution: Here, we use <a title="EXERCISES OF CHAPTER 2 A PART 3" href="http://linearalgebras.com/2014/12/exercises-chapter-2-part-3.html" target="_blank">Problem 14 of Exercises 2.A</a>. Hence there is a sequence $W_1$, $W_2$, $\cdots$ of vectors in $W$ such that $W_1$, $W_2$, $\cdots$, $W_m$ is linearly independent for every positive integer $m$. Consider $T_i\in \ca L(V,W)$ such that $T_i(v_1)=w_i$, where $v_1$, $v_2$, $\cdots$, $v_n$ is a basis of $V$. The existence of $T_i$ are guaranteed by 3.5(not unique). Then we show that $T_1$, $\cdots$, $T_m$ is linearly independent for every positive integer $m$. Suppose there are $a_1$, $\cdots$, $a_m\in\mb F$ such that \[a_1T_1+\cdots+a_mT_m=0.\]Then we have $(a_1T_1+\cdots+a_mT_m)(v_1)=0$, i.e. \[a_1w_1+\cdots+a_mw_m=0.\]Since $W_1$, $W_2$, $\cdots$, $W_m$ is linearly independent, it follows that $a_1=\cdots=a_m=0$. Thus $T_1$, $\cdots$, $T_m$ is linearly independent. Again by <a title="EXERCISES OF CHAPTER 2 A PART 3" href="http://linearalgebras.com/2014/12/exercises-chapter-2-part-3.html" target="_blank">Problem 14 of Exercises 2.A</a>, it follows that $\ca L(V,W)$ is infinite-dimensional.</p>
+<hr />
+<p>13. Suppose $v_1$, $v_2$, $\cdots$, $v_m$ is a linearly dependent list of vectors in $V$. Suppose also that $W\ne \{0\}$. Prove that there exist $w_1$, $w_2$, $\cdots$, $w_m\in W$ such that no $T\in\ca L(V,W) $ satisfies $Tv_k= w_k$ for each $k=1,\cdots,m$.</p>
+<p>Solution: Because $v_1$, $v_2$, $\cdots$, $v_m$ is a linearly dependent, there exist $a_1$, $\cdots$, $a_m\in\mb F$ such that \[a_1v_1+\cdots+a_mv_m=0\]and some $a_i\ne 0$(this $i$ is fixed). Then let $w_i\ne 0$ while $w_j=0$ if $j\ne i$, where $w_1$, $w_2$, $\cdots$, $w_m\in W$. We will show there is no $T\in\ca L(V,W) $ satisfies $Tv_k= w_k$ for each $k=1,\cdots,m$. Otherwise, we have \[0=T(a_1v_1+\cdots+a_mv_m)=a_1w_1+\cdots+a_mw_m=a_iw_i.\]Notice that $a_i\ne0$ and $w_i\ne 0$ by our choice, we get a contradiction.</p>
+<hr />
+<p>14. Suppose $V$ is finite-dimensional with $\dim V \ge 2$. Prove that there exist $S,T\in \ca L(V,V)$ such that $ST\ne TS$.</p>
+<p>Solution: Let $e_1$, $\cdots$, $e_n$ be a basis of $V$, define $T\in \ca L(V,V)$ such that \[Te_1=e_2,\quad Te_2=e_1,\quad Te_{i}=e_{i},\quad\text{for}\quad i\ge 2,\]and $S\in \ca L(V,V)$ such that \[Se_1=e_1,\quad Se_2=2e_2,\quad Se_{i}=e_{i},\quad\text{for}\quad i\ge 2.\]The existences of $S$ and $T$ are guaranteed by 3.5(unique). Then \[STe_1=Se_2=2e_2,\quad TSe_1=Te_1=e_2.\]Hence $STe_1\ne TSe_1$, it implies $ST\ne TS$.</p>
+<center><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- IH -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-5289197296725423"
+     data-ad-slot="8213787797"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></center>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'linearalg';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<script type="text/x-mathjax-config">
+                    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],scale: 90, linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50), },
+                    tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                     TeX: {  equationNumbers: {autoNumber: ["AMS"], useLabelIds: true},noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}",beqn:"\\begin{eqnarray}",eeqn:"\\end{equation}",beq:"\\begin{eqnarray}",eeq:"\\end{eqnarray}",be:"\\begin{equation}",ee:"\\end{eqnarray}",ca:"\\mathcal",m:"\\mathrm",mf:"\\mathbf",mb:"\\mathbb",N:"{\\mathbb{N}}",Z:"{\\mathbb{Z}}",R:"{\\mathbb{R}}",C:"{\\mathbb{C}}",vp:"{\\varphi}",e:"{\\epsilon}" } },
+                                        messageStyle: "none"
+                }); 
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+</script></script><script type='text/x-mathjax-config'>
+    MathJax.Hub.Config({
+        TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}},
+        "HTML-CSS": {linebreaks: {automatic: true}},
+        SVG: {linebreaks: {automatic: true}}
+    });
+</script>
+</body>
+</html>
