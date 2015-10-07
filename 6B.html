@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta name="description" content="Solutions to Linear Algebra Done Right 3rd version, Chapter 6, exercise B"/>
+<link rel="canonical" href="http://linearalgebras.com/6B.html" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Solutions to Linear Algebra Done Right Chapter 6 exercise B" />
+<meta property="og:description" content="Solutions to Linear Algebra Done Right 3rd version, Chapter 6, exercise B" />
+<meta property="og:url" content="http://linearalgebras.com/6B.html" />
+<meta property="og:site_name" content="Solutions to Linear Algebra Done Right 3rd Edition" />
+<meta property="article:tag" content="Chapter 6" />
+<meta property="article:tag" content="Solution" />
+<meta property="article:section" content="Linear Algebra" />
+<meta property="article:published_time" content="2014-12-07T15:53:58+00:00" />
+<meta property="article:modified_time" content="2015-05-09T11:11:19+00:00" />
+<meta property="og:updated_time" content="2015-05-09T11:11:19+00:00" />
+
+<title>Solutions to Linear Algebra Done Right 3rd Edition</title>
+
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+
+</head>
+
+<body>
+<h1>Solutions to Linear Algebra Done Right 3rd Edition</h1>
+
+<h2 align="right">Chapter 6 Exercise B</h2>
+<hr/>
+<p>2. Suppose $e_1$, $\cdots$, $e_m$ is an orthonormal list of vectors in $V$. Let $v\in V$. Prove that \[\|v\|^2=|\langle v,e_1\rangle|^2+\cdots+|\langle v,e_m\rangle|^2\] if and only if $v\in \m{span}(e_1,\cdots,e_m)$.</p>
+<p>Solution: If $v\in \m{span}(e_1,\cdots,e_m)$, then $e_1$, $\cdots$, $e_m$ is an orthonormal basis of $\m{span}(e_1,\cdots,e_m)$ by 6.26. By 6.30, it follows that\[\|v\|^2=|\langle v,e_1\rangle|^2+\cdots+|\langle v,e_m\rangle|^2.\] If $\|v\|^2=|\langle v,e_1\rangle|^2+\cdots+|\langle v,e_m\rangle|^2$, we denote \[ \xi=v-(\langle v,e_1\rangle e_1 +\cdots+\langle v,e_m\rangle e_m). \]It is easily seen that \[ \langle \xi,e_i\rangle=\langle v,e_i\rangle-\langle v,e_i\rangle=0 \]for $i=1,\cdots,m$. This implies\[\langle \xi,e_1\rangle e_1 +\cdots+\langle v,e_m\rangle e_m\rangle=0.\]By 6.13, we have \begin{align*} \|v\|^2=&amp;\|\xi\|^2+\|\langle v,e_1\rangle e_1 +\cdots+\langle v,e_m\rangle e_m\|^2\\ =&amp;\|\xi\|^2+|\langle v,e_1\rangle|^2+\cdots+|\langle v,e_m\rangle|^2.\end{align*} It follows that $\|\xi\|^2=0$, hence $\xi=0$. Thus $v=\langle v,e_1\rangle e_1 +\cdots+\langle v,e_m\rangle e_m$, namely $v\in \m{span}(e_1,\cdots,e_m)$.</p>
+<hr />
+<p>4. Suppose n is a positive integer. Prove that \[ \frac{1}{\sqrt{2\pi}},\frac{\cos x}{\sqrt{2\pi}},\frac{\cos 2x}{\sqrt{2\pi}},\cdots,\frac{\cos nx}{\sqrt{2\pi}},\frac{\sin x}{\sqrt{2\pi}},\frac{\sin 2x}{\sqrt{2\pi}},\cdots,\frac{\sin nx}{\sqrt{2\pi}} \]is an orthonormal list of vectors in $C[-\pi,\pi]$, the vector space of continuous real-valued functions on $[-\pi,\pi]$ with inner product \[\langle f,g\rangle=\int_{-\pi}^{\pi}f(x)g(x)dx.\][The orthonormal list above is often used for modeling periodic phenomena such as tides.]</p>
+<p>Solution: See <a title="Linear Algebra Done Right Solution Manual " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 6 Problem 9.</p>
+<center><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- IH -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-5289197296725423"
+     data-ad-slot="8213787797"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></center><div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'linearalg';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<script type="text/x-mathjax-config">
+                    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],scale: 90, linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50), },
+                    tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                     TeX: {  equationNumbers: {autoNumber: ["AMS"], useLabelIds: true},noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}",beqn:"\\begin{eqnarray}",eeqn:"\\end{equation}",beq:"\\begin{eqnarray}",eeq:"\\end{eqnarray}",be:"\\begin{equation}",ee:"\\end{eqnarray}",ca:"\\mathcal",m:"\\mathrm",mf:"\\mathbf",mb:"\\mathbb",N:"{\\mathbb{N}}",Z:"{\\mathbb{Z}}",R:"{\\mathbb{R}}",C:"{\\mathbb{C}}",vp:"{\\varphi}",e:"{\\epsilon}" } },
+                                        messageStyle: "none"
+                }); 
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+</script></script><script type='text/x-mathjax-config'>
+    MathJax.Hub.Config({
+        TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}},
+        "HTML-CSS": {linebreaks: {automatic: true}},
+        SVG: {linebreaks: {automatic: true}}
+    });
+</script>
+</body>
+</html>
