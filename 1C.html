@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta name="description" content="Solutions to Linear Algebra Done Right 3rd version, Chapter 1, exercise 1C"/>
+<link rel="canonical" href="http://linearalgebras.com/1C.html" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Solutions to Linear Algebra Done Right Chapter 1 exercise C" />
+<meta property="og:description" content="Solutions to Linear Algebra Done Right 3rd version, Chapter 1, exercise 1C" />
+<meta property="og:url" content="http://linearalgebras.com/1C.html" />
+<meta property="og:site_name" content="Solutions to Linear Algebra Done Right 3rd Edition" />
+<meta property="article:tag" content="Chapter 1" />
+<meta property="article:tag" content="Solution" />
+<meta property="article:section" content="Linear Algebra" />
+<meta property="article:published_time" content="2014-12-07T15:53:58+00:00" />
+<meta property="article:modified_time" content="2015-05-09T11:11:19+00:00" />
+<meta property="og:updated_time" content="2015-05-09T11:11:19+00:00" />
+
+<title>Solutions to Linear Algebra Done Right 3rd Edition</title>
+
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+
+</head>
+
+<body>
+<h1>Solutions to Linear Algebra Done Right 3rd Edition</h1>
+
+<h2 align="right">Chapter 1 Exercise C</h2>
+<hr/>
+<p>1. For each of the following subsets of $\mathbb F^3$, determine whether it is a subspace of $\mathbb F^3$:</p>
+<p>(a) $\{(x_1,x_2,x_3)\in\mathbb F^3:x_1+2x_2+3x_3=0\}$;</p>
+<p>(b) $\{(x_1,x_2,x_3)\in\mathbb F^3:x_1+2x_2+3x_3=4\}$;</p>
+<p>(c) $\{(x_1,x_2,x_3)\in\mathbb F^3:x_1 x_2 x_3=0\}$;</p>
+<p>(d) $\{(x_1,x_2,x_3)\in\mathbb F^3:x_1=5x_3\}$.</p>
+<div>Solution: (a) $\{(x_1,x_2,x_3)\in\mathbb F^3:x_1+2x_2+3x_3=0\}$ is a subspace of $\mathbb F^3$. By 1.34, to show a subset is a subspace, we just need to check Additive identity, Closed under addition and Closed under scalar multiplication.</div>
+<div>Additive identity: it is clear that the additive identity $(0,0,0)$ of $\mathbb F^3$ is contained in $\{(x_1,x_2,x_3)\in\mathbb F^3:x_1+2x_2+3x_3=0\}$.</div>
+<div>Closed under addition: if $(a_1,a_2,a_3),(b_1,b_2,b_3)\in \{(x_1,x_2,x_3)\in\mathbb F^3:x_1+2x_2+3x_3=0\}$, then\[a_1+2a_2+3a_3=0\quad\text{and} \quad b_1+2b_2+3b_3=0.\]Hence\[(a_1+b_1)+2(a_2+b_2)+3(a_3+b_3)=(a_1+2a_2+3a_3)+(b_1+2b_2+3b_3)=0,\]this means $(a_1+b_1,a_2+b_2,a_3+b_3)=(a_1,a_2,a_3)+(b_1,b_2,b_3)$ is also in $\{(x_1,x_2,x_3)\in\mathbb F^3:x_1+2x_2+3x_3=0\}$.</div>
+<div>Closed under scalar multiplication: if $(a_1,a_2,a_3)\in \{(x_1,x_2,x_3)\in\mathbb F^3:x_1+2x_2+3x_3=0\}$, then $a_1+2a_2+3a_3=0$. For any $\lambda\in\mathbb F$, we have\[\lambda a_1+2(\lambda a_2)+3(\lambda a_3)=\lambda(a_1+2a_2+3a_3)=0.\]This means \[\lambda(a_1,a_2,a_3)=(\lambda a_1,\lambda a_2,\lambda a_3)\in \{(x_1,x_2,x_3)\in\mathbb F^3:x_1+2x_2+3x_3=0\}.\] (b) $\{(x_1,x_2,x_3)\in\mathbb F^3:x_1+2x_2+3x_3=4\}$ is not a subspace of $\mathbb F^3$ since $(0,0,0)$ is not in it.</div>
+<div>(c) $\{(x_1,x_2,x_3)\in\mathbb F^3:x_1 x_2 x_3=0\}$ is not a subspace of $\mathbb F^3$ since $(1,1,0)$ and $(0,1,1)$ are in it, but the sum $(1,2,1)=(1,1,0)+(0,1,1)$ is not in it.</div>
+
+<div>(d) $\{(x_1,x_2,x_3)\in\mathbb F^3:x_1=5x_3\}$ is a subspace of $\mathbb F^3$.</div>
+
+<div>Additive identity: it is clear that the additive identity $(0,0,0)$ of $\mathbb F^3$ is contained in $\{(x_1,x_2,x_3)\in\mathbb F^3:x_1=5x_3\}$.</div>
+
+<div>Closed under addition: if $(a_1,a_2,a_3),(b_1,b_2,b_3)\in \{(x_1,x_2,x_3)\in\mathbb F^3:x_1=5x_3\}$, then $a_1=5a_3$ and $b_1=5b_3$. Hence\[a_1+b_1=5a_3+5b_3=5(a_3+b_3),\]this means $(a_1+b_1,a_2+b_2,a_3+b_3)=(a_1,a_2,a_3)+(b_1,b_2,b_3)$ is also in $\{(x_1,x_2,x_3)\in\mathbb F^3:x_1=5x_3\}$.</div>
+
+<div>Closed under scalar multiplication: if $(a_1,a_2,a_3)\in \{(x_1,x_2,x_3)\in\mathbb F^3:x_1=5x_3\}$, then $a_1=5a_3$. For any $\lambda\in\mathbb F$, we have $\lambda a_1=\lambda(5 a_3)=5(\lambda a_3)$. This means \[\lambda(a_1,a_2,a_3)=(\lambda a_1,\lambda a_2,\lambda a_3)\in \{(x_1,x_2,x_3)\in\mathbb F^3:x_1=5x_3\}.\]</div>
+<hr />
+
+<p>2. Verify all the assertions in Example 1.35.</p>
+<p>Solution: (a) If this set is a subspace of $\mathbb F^4$, then $(0,0,0,0)\in \mathbb F^4$, then $0=5\cdot 0+b$. Hence $b=0$. Follow the same steps of Problem 1 (d), we will see the set is a subspace of $\mathbb F^4$ if $b=0$.</p>
+<p>(b) (c) and (d) is similar to Problem 3 and 4.</p>
+<p>Now let us consider (e). Denote the set of all sequences of complex numbers with limit $0$ by $A$.</p>
+<p>Additive identity: it is clear that $(0,0,\cdots)\in A$.</p>
+<p>Closed under addition: if $(a_1,a_2,\cdots),(b_1,b_2,\cdots)\in A$, then\[\lim_{n\to\infty}a_n=0\quad\text{and}\quad\lim_{n\to\infty}b_n=0.\]It is easy to see\[\lim_{n\to\infty}(a_n+b_n)=\lim_{n\to\infty}a_n+\lim_{n\to\infty}b_n=0+0=0.\]This means $(a_1+b_1,a_2+b_2,\cdots)=(a_1,a_2,\cdots)+(b_1,b_2,\cdots)\in A$.</p>
+<p>Closed under scalar multiplication: if $(a_1,a_2,\cdots)\in A$, then\[\lim_{n\to\infty}a_n=0.\]For any $\lambda\in\mathbb C$, it is easy to see\[\lim_{n\to\infty}(\lambda a_n)=\lambda\lim_{n\to\infty} a_n=\lambda 0=0.\]This means $\lambda(a_1,a_2,\cdots)=(\lambda a_1,\lambda a_2,\cdots)\in A$.</p>
+<hr />
+
+<p>3. Show that the set of differentiable real-valued functions $f$ on the interval $(-4,4)$ such that $f'(-1)=3f(2)$ is a subspace of $\mathbb R^{(-4,4)}$.</p>
+<p>Solution: Denote the set of differentiable real-valued functions $f$ on the interval $(-4,4)$ such that $f'(-1)=3f(2)$ by $V$.</p>
+<p>Additive identity: it is clear that the constant function $f\equiv 0$ is contained in $V$.</p>
+<p>Closed under addition: if $f,g\in V$, then $f$ and $g$ are differentiable real-valued functions. So is $f+g$. Moreover,\[(f+g)'(-1)=f'(-1)+g'(-1)=3f(2)+3g(2)=3(f(2)+g(2))=3(f+g)(2).\]This concludes $V$ is closed under addition.</p>
+<p>Closed under scalar multiplication: if $f\in V$, for any $\lambda\in \mathbb R$, then $f$ is differentiable real-valued functions. So is $\lambda f$. Moreover,\[(\lambda f)'(-1)=\lambda f'(-1)=\lambda (3f)(2)=3(\lambda f)(2).\]This deduces $V$ is closed under scalar multiplication.</p>
+
+<hr />
+
+<div>4. Suppose $b\in\mathbb R$. Show that the set of continuous real-valued functions $f$ on the interval $[0,1]$ such that $\int_0^1f=b$ is a subspace of $\mathbb R^{[0,1]}$ if and only if $b=0$.</div>
+
+<div>Solution: Denote the set of continuous real-valued functions $f$ on the interval $[0,1]$ such that $\int_0^1f=b$ by $V_b$.</div>
+
+<div>If $V_b$ is a subspace of $\mathbb R^{[0,1]}$, then for any $f\in V_b$, we have $\int_0^1f=b$. Because $V_b$ is a subspace of $\mathbb R^n$, it follows that $kf\in V_b$ for any $k\in\mathbb R$. Hence\[b=\int_0^1(kf)=k\int_0^1f=kb,\quad \text{for all}~k\in\mathbb R,\]this happens if and only if $b=0$.</div>
+
+<div>Now if $b=0$, then for any $f,g\in V_0$ and $\lambda\in\mathbb R$. We have that\[\int_0^1(f+g)=\int_0^1f+\int_0^1g=0+0=0\]and $f+g$ is continuous real-valued functions since $f$ and $g$ are. This deduces $f+g\in V_0$, i.e. $V_0$ is closed under addition. Similarly,\[\int_0^1(\lambda f)=\lambda\int_0^1f=k0=0\]and $\lambda f$ is continuous real-valued functions since $f$ is. This implies $\lambda f\in V_0$, i.e. $V_0$ is closed under scalar multiplication. On the other hand, the constant function $f\equiv 0\in V_0$, which is also the additive identity in $\mathbb R^{[0,1]}$. Hence $V_0$ is a subspace of $\mathbb R^n$ by 1.34.</div>
+
+
+
+<hr  />
+
+<div>5. Is $\mathbb R^2$ a subspace of the complex vector space $\mathbb C^2$?</div>
+
+<div>Solution: Note that we consider complex vector space, so if $\mathbb R^2$ is a subspace of the complex vector space $\mathbb C^2$, then\[i(1,1)=(i,i)\in\mathbb R^2,\]we get a contradiction. Hence $\mathbb R^2$ is not a subspace of the complex vector space $\mathbb C^2$.</div>
+
+<hr  />
+
+<div>6. (a) Is $\{(a,b,c)\in\mathbb R^3:a^3=b^3\}$ a subspace of $\mathbb R^3$?</div>
+<div>(b) Is $\{(a,b,c)\in\mathbb C^3:a^3=b^3\}$ a subspace of $\mathbb C^3$?</div>
+
+<div>Solution: (a) Because $a^3=b^3$ if and only if $a=b$ in $\mathbb R$, hence \[\{(a,b,c)\in\mathbb R^3:a^3=b^3\}=\{(a,b,c)\in\mathbb R^3:a=b\}\]is obviously a subspace of $\mathbb R^3$ by the similar arguments in Problem 1 and Problem 2.</div>
+
+<p>(b) Note that\[x=\left(1,\frac{-1+\sqrt{3}i}{2},0\right)\in\{(a,b,c)\in\mathbb C^3:a^3=b^3\}\]and\[y=\left(1,\frac{-1-\sqrt{3}i}{2},0\right)\in\{(a,b,c)\in\mathbb C^3:a^3=b^3\}.\]However,\[x+y=(2,-1,0)\notin \{(a,b,c)\in\mathbb C^3:a^3=b^3\}.\]This implies $\{(a,b,c)\in\mathbb C^3:a^3=b^3\}$ is not closed under addition, hence not a subspace of $\mathbb C^3$.</p>
+<hr />
+<div>7. Give an example of a nonempty subset $U$ of $\mathbb R^2$ such that $U$ is closed under addition and under taking additive inverses (meaning $-u\in U$ whenever $u\in U$), but $U$ is not a subspace of $\mathbb R^2$.</div>
+<div></div>
+<div>Solution: Denote $\{(x,y)\in\mathbb R^2:x,y\in\mathbb Z\}$ by $U$, then $U$ is not empty. If $(x_1,y_1)\in A$ and $(x_2,y_2)\in A$, then $x_1,x_2,y_1,y_2\in\mathbb Z$. Hence $x_1+x_2$ and $y_1+y_2$ are integers. This means $(x_1+x_2,y_1+y_2)=(x_1,y_1)+(x_2,y_2)\in U$, i.e. $U$ is closed under addition. Similarly, since $(-x_1,-y_1)\in U$, it follows that $U$ is closed under additive inverses. However, $U$ is not closed under scalar multiplication since $(1,1)\in A$ while $\dfrac{1}{2}(1,1)\notin U$. Hence $U$ is not a subspace of $\mathbb R^2$.</div>
+
+<hr />
+<div>8. Give an example of a nonempty subset $U$ of $\mathbb R^2$ such that $U$ is closed under scalar multiplication, but $U$ is not a subspace of $\mathbb R^2$.</div>
+<div></div>
+<div>Solution: Denote $\{(x,y)\in \mathbb R^2: x=0~\text{or}~y=0\}$ by $U$, then $U$ is not empty. If $(x,0)\in U$, then for any $\lambda\in\mathbb R$, we have\[\lambda(x,0)=(\lambda x,0)\in U.\]Similarly, $\lambda(0,y)\in U$, hence $U$ is closed under scalar multiplication. However, $(1,0),(0,1)\in U$ while $(1,1)=(1,0)+(0,1)\notin U$. This implies $U$ is not closed under addition, hence not a subspace of $\mathbb R^2$.</div>
+
+<hr />
+<div>9.  A function $f:\mathbb R\to \mathbb R$ is called periodic if there exists a positive number $p$ such that $f(x)=f(x+p)$ for all $x\in\mathbb R$. Is the set of periodic functions from $\mathbb R$ to $\mathbb R$ a subspace of $\mathbb R^{\mathbb R}$? Explain.</div>
+<div></div>
+<div>Solution: Denote the set of periodic functions from $\mathbb R$ to $\mathbb R$ by $S$. Then $S$ is not a subspace of $\mathbb R^{\mathbb R}$. Otherwise, we have $h(x)=\sin\sqrt{2}x+\cos x$ since both $f(x)=\sin\sqrt{2}x$ and $g(x)=\cos x$ are periodic functions from $\mathbb R$ to $\mathbb R$. Assume there exists a positive number $p$ such that $h(x)=h(x+p)$ for all $x\in\mathbb R$, then $1=h(0)=h(p)=h(-p)$. It is equivalent to \[1=\cos p+\sin\sqrt{2}p=\cos p-\sin\sqrt{2}p,\]this implies $\sin\sqrt{2}p=0$ and $\cos p=1$. $\cos p=1$ deduces that $p=2k\pi$ where $k\in \mathbb Z$. However $\sin\sqrt{2}p=0$ implies $\sqrt{2}p=2l\pi$ where $l\in\mathbb Z$. Hence \[\sqrt{2}=\frac{2l\pi}{2k\pi}=\frac{l}{k}\in\mathbb Q,\]which is impossible. Therefore we get the conclusion.</div>
+
+<hr />
+<div>10. Suppose $U_1$ and $U_2$ are subspaces of $V$. Prove that the intersection $U_1\cap U_2$ is a subspace of $V$.</div>
+<div></div>
+<div>Solution: Additive identity: by definition $0\in U_1$ and $0\in U_2$, hence $0\in U_1\cap U_2$.</div>
+<div></div>
+<div>Closed under addition: if $x\in U_1\cap U_2$ and $y\in U_1\cap U_2$, then $x\in U_1$ and $y\in U_1$, hence $x+y\in U_1$ for $U_1$ is closed under addition. Similarly, $x+y\in U_2$. Therefore $x+y\in U_1\cap U_2$.</div>
+<div></div>
+<div>Closed under scalar multiplication: if $x\in U_1\cap U_2$, then $x\in U_1$. Then for any $\lambda\in\mathbb F$, we have $\lambda x\in U_1$ since $U_1$ is closed under scalar multiplication. Similarly, $\lambda x\in U_2$. Therefore $\lambda x\in U_1\cap U_2$.</div>
+
+<hr />
+<div>11. Prove that the intersection of every collection of subspaces of $V$ is a subspace of $V$.</div>
+<div></div>
+<div>Solution: Assume $U_i$ are subspaces of $V$, where $i\in I$. Now we will show $\cap_{i\in I}U_i$ is a subspace of $V$</div>
+<div>Additive identity: by definition $0\in U_i$ for every $i\in I$, hence $0\in \cap_{i\in I}U_i$.</div>
+<div></div>
+<div>Closed under addition: if $x\in \cap_{i\in I}U_i$ and $y\in \cap_{i\in I}U_i$, then for any given $i\in I$, we have $x\in U_i$ and $y\in U_i$, hence $x+y\in U_i$ for $U_i$ is closed under addition. Therefore $x+y\in \cap_{i\in I}U_i$.</div>
+<div></div>
+<div>Closed under scalar multiplication: if $x\in \cap_{i\in I}U_i$, then $x\in U_i$ for any given $i\in I$. Then for any $\lambda\in\mathbb F$, we have $\lambda x\in U_i$ since $U_i$ is closed under scalar multiplication. Therefore $\lambda x\in \cap_{i\in I}U_i$.</div>
+
+<hr />
+<div>12. Prove that the union of two subspaces of $V$ is a subspace of $V$ if and only if one of the subspaces is contained in the other.</div>
+
+<div>Solution: Suppose $U$ and $W$ are two subspaces of $V$. We argue it by contradiction. If $U\cup W$ is a subspace of $V$, moreover $U\nsubseteq W$ and $W\nsubseteq U$. Consider $u\in U\setminus W$ and $w\in W\setminus U$, then $u+w\in U\cup W$ since $U\cup W$ is a subspace of $V$. Hence $u+w\in U$ or $W$. If $u+w\in U$, then $w=(u+w)-u\in U$. We get a contradiction. If $u+w\in W$, then $u=(u+w)-w\in W$. We also get a contradiction. Hence if $U\cup W$ is a subspace of $V$, we must have $U\subset W$ or $W\subset U$.</div>
+
+<div>If $U\subset W$ or $W\subset U$. Without loss of generality, we can assume $U\subset W$. Then $U\cup W=W$ is obviously a subspace of $V$.</div>
+<hr />
+<p>13. Prove that the union of three subspaces of $V$ is a subspace of $V$ if and only if one of the subspaces contains the other two. [\emph{This exercise is surprisingly harder than the previous exercise, possibly because this exercise is not true if we replace F with a field containing only two elements}.]</p>
+<hr />
+<p>14. Verify the assertion in Example 1.38.</p>
+<p>Solution: It is clear that $U$ and $W$ are subspaces of $\mathbb{F}^4$. \\ Now assume that $(x_1,x_1,y_1,y_1)\in U$ and $(x_2,x_2,x_2,y_2)\in W$, then \begin{align*} &amp;(x_1,x_1,y_1,y_1)+(x_2,x_2,x_2,y_2)\\=&amp;(x_1+x_2,x_1+x_2,y_1+x_2,y_1+y_2) \in \{(x,x,y,z):x,y,z\in\mathbb F^4\}. \end{align*} Hence $U+W\subset \{(x,x,y,z):x,y,z\in\mathbb F^4\}$. For any $x,y,z\in\mathbb F$, we have $(0,0,y-x,y-x)\in U$ and $(x,x,x,z+x-y)\in W$. However, \[ (x,x,y,z)=(0,0,y-x,y-x)+(x,x,x,z+x-y)\in U+W, \]hence $\{(x,x,y,z):x,y,z\in\mathbb F^4\}\subset U+W$. Combining this with previous argument, it follows that $U+W=\{(x,x,y,z):x,y,z\in\mathbb F^4\}$.</p>
+<hr />
+<p>15. Suppose $U$ is a subspace of $V$. What is $U+U$?</p>
+<p>Solution: Because $U$ is a subspace of $V$, hence closed under addition.Therefore for any $x,y\in U$, we have $x+y\in U$, i.e. $U+U\subset U$. Note that if $x\in U$, then $x=x+0\in U+U$, hence $U\subset U+U$. Combining with these arguments, it follows that $U+U=U$.</p>
+<hr />
+<p>16. Is the operation of addition on the subspaces of $V$ commutative? In other words, if $U$ and $W$ are subspaces of $V$, is $U+W=W+U$?</p>
+<p>Solution: For $x\in U$ and $y\in W$, because addition in V is commutative, we have $x+y=y+x\in W+U$. This implies $U+W\subset W+U$. Similarly, we have $W+U\subset U+W$. Hence $U+W=W+U$.</p>
+<hr />
+<p>17. Is the operation of addition on the subspaces of $V$ associative? In other words, if $U_1$, $U_2$, $U_3$ are subspaces of $V$, is \[(U_1+U_2)+U_3=U_1+(U_2+U_3).\]</p>
+<p>Solution: Note that in V, we have $(x+y)+z=x+(y+z)$. Hence this is similar to Problem 16. Let $x_i\in U_i$, $i=1,2,3$, then \[(x_1+x_2)+x_3=x_1+(x_2+x_3)\in U_1+(U_2+U_3).\]Since every element in $(U_1+U_2)+U_3$ can be expressed as the form $(x_1+x_2)+x_3$, it follows that $(U_1+U_2)+U_3\subset U_1+(U_2+U_3)$. Similarly, we also have $U_1+(U_2+U_3)\subset (U_1+U_2)+U_3$. Hence $(U_1+U_2)+U_3=U_1+(U_2+U_3)$.</p>
+<hr />
+<p>18. Does the operation of addition on the subspaces of $V$ have an additive identity? Which subspaces have additive inverses?</p>
+<p>Solution: If $U$ is a additive identity, then for any subspace $W$ of $V$, we have $U+W=W$. This means $U\subset W$ by the similar arguments in Problem 15 and 16. Hence the only possibility is $U=0$, in fact this is the case. Hence $0$ is the additive identity. Suppose subspace $W$ of $V$ has additive inverses, then there exists a subspace $S$ of $V$ such that $W+S=0$. This can only happen when $W=0$ since $W\subset W+S$.</p>
+<center><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- IH -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-5289197296725423"
+     data-ad-slot="8213787797"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></center>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'linearalg';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<script type="text/x-mathjax-config">
+                    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],scale: 90, linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50), },
+                    tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                     TeX: {  equationNumbers: {autoNumber: ["AMS"], useLabelIds: true},noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}",beqn:"\\begin{eqnarray}",eeqn:"\\end{equation}",beq:"\\begin{eqnarray}",eeq:"\\end{eqnarray}",be:"\\begin{equation}",ee:"\\end{eqnarray}",ca:"\\mathcal",m:"\\mathrm",mf:"\\mathbf",mb:"\\mathbb",N:"{\\mathbb{N}}",Z:"{\\mathbb{Z}}",R:"{\\mathbb{R}}",C:"{\\mathbb{C}}",vp:"{\\varphi}",e:"{\\epsilon}" } },
+                                        messageStyle: "none"
+                }); 
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+</script></script><script type='text/x-mathjax-config'>
+    MathJax.Hub.Config({
+        TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}},
+        "HTML-CSS": {linebreaks: {automatic: true}},
+        SVG: {linebreaks: {automatic: true}}
+    });
+</script>
+</body>
+</html>
