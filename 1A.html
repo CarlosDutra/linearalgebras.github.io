@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta name="description" content="Solutions to Linear Algebra Done Right 3rd version, Chapter 1, exercise 1A"/>
+<link rel="canonical" href="http://linearalgebras.com/1A.html" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Solutions to Linear Algebra Done Right Chapter 1 exercise A" />
+<meta property="og:description" content="Solutions to Linear Algebra Done Right 3rd version, Chapter 1, exercise 1A" />
+<meta property="og:url" content="http://linearalgebras.com/1A.html" />
+<meta property="og:site_name" content="Solutions to Linear Algebra Done Right 3rd Edition" />
+<meta property="article:tag" content="Chapter 1" />
+<meta property="article:tag" content="Solution" />
+<meta property="article:section" content="Linear Algebra" />
+<meta property="article:published_time" content="2014-12-07T15:53:58+00:00" />
+<meta property="article:modified_time" content="2015-05-09T11:11:19+00:00" />
+<meta property="og:updated_time" content="2015-05-09T11:11:19+00:00" />
+
+<title>Solutions to Linear Algebra Done Right 3rd Edition</title>
+
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+
+</head>
+
+<body>
+<h1>Solutions to Linear Algebra Done Right 3rd Edition</h1>
+
+<h2 align="right">Chapter 1 Exercise A</h2>
+<hr/>
+<p>1.  Suppose $a$ and $b$ are real numbers, not both 0. Find real numbers $c$ and $d$ such that\[\frac{1}{a+bi}=c+di.\]Solution: Because $(a+bi)(a-bi)=a^2+b^2$, one has\[\frac{1}{a+bi}=\frac{a-bi}{a^2+b^2},\]Hence\[c=\frac{a}{a^2+b^2},d=-\frac{b}{a^2+b^2}.\]</p>
+<hr />
+<p>2. Show that \[\frac{-1+\sqrt{3}i}{2}\] is a cube root of 1 (meaning that its cube equals 1).</p>
+<p>Soltion1:From direct computation, \[\left(\frac{-1+\sqrt{3}i}{2}\right)^2=\frac{-1-\sqrt{3}i}{2},\]hence \[\left(\frac{-1+\sqrt{3}i}{2}\right)^3=\frac{-1-\sqrt{3}i}{2}\cdot\frac{-1+\sqrt{3}i}{2}=1.\]This means $\dfrac{-1+\sqrt{3}i}{2}$ is a cube root of 1.</p>
+<hr />
+<p>Solution2: Note that \[(a+bi)+(a-bi)=2a\] and \[(a+bi)(a-bi)=a^2+b^2,\] it follows that $\dfrac{-1+\sqrt{3}i}{2}$ is a root of the quadratic equation \[x^2+x+1=0.\] For \[\frac{-1+\sqrt{3}i}{2}+\frac{-1-\sqrt{3}i}{2}=-1\] and \[\frac{-1+\sqrt{3}i}{2}\frac{-1-\sqrt{3}i}{2}=1.\] Because \[x^3-1=(x-1)(x^2+x+1),\] we obtain the conclusion.</p>
+<hr />
+<p>3. Find two distinct square roots of $i$ .</p>
+<p><span style="line-height: 1.6471;">Solution: If we know that \[i=e^{\pi i/2},\] then the square roots are \[e^{\pi i/4}\quad\text{and}\quad e^{(\pi i/2+2\pi i)/2}=e^{5\pi i/4}.\] Note that for any $x\in\mathbb R$, one has \[e^{xi}=\cos x+i\sin x.\] Then \[e^{\pi i/4}=\cos\frac{\pi}{4}+i\sin\frac{\pi}{4}=\frac{\sqrt{2}(1+i)}{2}\] and \[e^{5\pi i/4}=\cos\frac{5\pi}{4}+i\sin\frac{5\pi}{4}=\frac{-\sqrt{2}(1+i)}{2}.\] Hence the roots are $\dfrac{\sqrt{2}(1+i)}{2}$ and $-\dfrac{\sqrt{2}(1+i)}{2}$.</span></p>
+<blockquote><p>Remark: If we don't know this fact, then we should recall how to solve the roots of $x^8-1=0$ or $x^4+1=0$ since $x^2+i=0$ means $x^4+1=0$.</p></blockquote>
+<hr />
+<p>4. Show that $\alpha+\beta=\beta+\alpha$ for all $\alpha,\beta\in\mathbb C$.</p>
+<p>Solution: Let $\alpha=x+yi$ and $\beta=z+wi$, where $x,y,z,w\in\mathbb R$, then \[\alpha+\beta=(x+yi)+(z+wi)=(x+z)+(y+w)i.\] Similarly, \[\beta+\alpha=(z+wi)+(x+yi)=(z+x)+(w+y)i.\] Because $x+z=z+x$ and $y+w=w+y$, we obtain $\alpha+\beta=\beta+\alpha$.</p>
+<hr />
+<p>5. Show that $(\alpha+\beta)+\lambda=\alpha+(\beta+\lambda)$ for all $\alpha,\beta,\lambda\in\mathbb{C}$.</p>
+<p>Solution: Let $\alpha=x_1+y_1i$, $\beta=x_2+y_2i$, $\lambda=x_3+y_3i$, where $x_1,x_2,x_3$ and $y_1,y_2,y_3$ are real numbers. Then \begin{aligned} (\alpha+\beta)+\lambda=&amp;((x_1+x_2)+(y_1+y_2)i)+(x_3+y_3i)\\ =&amp;((x_1+x_2)+x_3)+((y_1+y_2)+y_3)i. \end{aligned} Similarly, $\alpha+(\beta+\lambda)=(x_1+(x_2+x_3))+(y_1+(y_2+y_3))i$. Note that\[(x_1+x_2)+x_3=x_1+(x_2+x_3)\quad\text{and}\quad (y_1+y_2)+y_3=y_1+(y_2+y_3),\]it follows that $(\alpha+\beta)+\lambda=\alpha+(\beta+\lambda)$.</p>
+<p>6. Show that $(\alpha\beta)\lambda=\alpha(\beta\lambda)$ for all $\alpha,\beta,\lambda\in\mathbb{C}$.</p>
+<p>Solution: Let $\alpha=x_1+y_1i$, $\beta=x_2+y_2i$, $\lambda=x_3+y_3i$, where $x_1,x_2,x_3$ and $y_1,y_2,y_3$ are real numbers. Then \begin{align*} (\alpha\beta)\lambda=&amp;((x_1x_2-y_1y_2)+(x_1y_2+y_1x_2)i)(x_3+y_3i)\\ =&amp;((x_1x_2-y_1y_2)x_3-(x_1y_2+y_1x_2)y_3)\\&amp;+((x_1x_2-y_1y_2)x_3+(x_1y_2+y_1x_2)y_3)i. \end{align*} Similarly, one has \begin{align*} \alpha(\beta\lambda)=&amp;(x_1+y_1i)((x_2x_3-y_2y_3)+(x_2y_3+y_2x_3)i)\\ =&amp;(x_1(x_2x_3-y_2y_3)-y_1(x_2y_3+y_2x_3))\\&amp;+(x_1(x_2y_3-y_2x_3)+y_1(x_2x_3+y_2y_3))i. \end{align*} It is easy to see\[ (x_1x_2-y_1y_2)x_3-(x_1y_2+y_1x_2)y_3=x_1(x_2x_3-y_2y_3)-y_1(x_2y_3+y_2x_3) \]and\[ (x_1x_2-y_1y_2)x_3+(x_1y_2+y_1x_2)y_3=x_1(x_2x_3-y_2y_3)-y_1(x_2y_3+y_2x_3), \] hence we deduce that $(\alpha\beta)\lambda=\alpha(\beta\lambda)$.</p>
+<hr />
+<p>7. Show that for every $\alpha\in\mathbb C$, there exists a unique $\beta\in\mathbb  C$ such that $\alpha+\beta=0$.</p>
+<p>Solution: Let $\alpha=x_1+y_1i$, $\beta=x_2+y_2i$, where $x_1,x_2$ and $y_1,y_2$ are real numbers. If $\alpha+\beta=0$, then \[ 0=\alpha+\beta=(x_1+x_2)+(y_1+y_2)i. \]This means $x_2=-x_1$ and $y_2=-x_1$, which implied uniqueness. If $\beta=-x_1-y_1i$, we also have $\alpha+\beta=0$, which implies existence.</p>
+<hr />
+<p>8. Show that for every $\alpha\in\mathbb C$ with $\alpha\ne0$, there exists a unique $\beta\in\mathbb C$ such that $\alpha\beta=1$.</p>
+
+<p>Solution: We already know the existence in Problem 1. Now let us show the uniqueness, if $\alpha\beta=1$, then\[\beta=1\cdot\beta=\left(\frac{1}{\alpha}\cdot\alpha\right)\cdot\beta=\frac{1}{\alpha}\cdot\left(\alpha\cdot\beta\right)=\frac{1}{\alpha}\cdot1=\frac{1}{\alpha}.\]Here the third equality follows from Problem 6.</p>
+<hr />
+<p>9. Show that $\lambda(\alpha+\beta)=\lambda\alpha+\lambda\beta$ for all $\lambda,\alpha,\beta\in\mathbb C$.</p>
+<p></p>Solution: Suppose $\alpha=x_1+y_1i$, $\beta=x_2+y_2i$, $\lambda=a+bi$, where $x_1,x_2,a$ and $y_1,y_2,b$ are real numbers. Then \begin{align*} \lambda(\alpha+\beta)=&amp;(a+bi)((x_1+x_2)+(y_1+y_2)i)\\ =&amp;(a(x_1+x_2)-b(y_1+y_2))+(a(y_1+y_2)+b(x_1+x_2))i\\ =&amp;[(ax_1-by_1)+(ay_1+bx_1)i]+[(ax_2-by_2)+(ay_2+bx_2)i]\\ =&amp;\lambda\alpha+\lambda\beta. \end{align*}</p>
+
+<hr />
+<p>10. Find $x\in\mathbb{R}^4$ such that\[(4,-3,1,7)+2x=(5,9,-6,8).\]</p>
+<p>Solution: Because $(4,-3,1,7)+2x=(5,9,-6,8)$, one has \[2x=(5,9,-6,8)-(4,-3,1,7)=(1,12,-7,1),\]hence\[x=\frac{1}{2}(1,12,-7,1)=\left(\frac{1}{2},6,\frac{-7}{2},\frac{1}{2}\right).\]</p>
+<hr />
+<p>11.  Explain why there does not exist $\lambda\in\mathbb C$ such that\[\lambda(2-3i,5+4i,-6+7i)=(12-5i,7+22i,-32-9i).\]Solution: If such $\lambda\in\mathbb C$ exists, then we have \[\lambda(2-3i)=12-5i\quad\text{and}\quad\lambda(-6+7i)=-32-9i.\]It follows that \[(2-3i)(-32-9i)=(-6+7i)(12-5i),\]this means \[37+78i=37+114i, \]which is impossible. Hence such $\lambda\in\mathbb C$ does not exist.</p>
+<hr />
+<p>12. Show that $(x+y)+z=x+(y+z)$ for all $x, y, z\in\mathbb F^n$.</p>
+<p>Solution: Suppose $x=(x_1,\cdots,x_n)$, $y=(y_1,\cdots,y_n)$ and $z=(z_1,\cdots,z_n)$. Then \begin{align*} (x+y)+z=&amp;((x_1,\cdots,x_n)+(y_1,\cdots,y_n))+(z_1,\cdots,z_n)\\ =&amp;(x_1+y_1,\cdots,x_n+y_n)+(z_1,\cdots,z_n)\\ =&amp;((x_1+y_1)+z_1,\cdots,(x_n+y_n)+z_n)\\ =&amp;(x_1+(y_1+z_1),\cdots,x_n+(y_n+z_n))\\ =&amp;(x_1,\cdots,x_n)+(y_1+z_1,\cdots,y_n+z_n)\\ =&amp;(x_1,\cdots,x_n)+((y_1,\cdots,y_n)+(z_1,\cdots,z_n))\\ =&amp;x+(y+z). \end{align*}</p>
+<hr />
+<p>13. Show that $(ab)x=a(bx)$ for all $x\in\mathbb F^n$ and all $a,b \in\mathbb F$.</p>
+<p>Solution: Suppose $x=(x_1,\cdots,x_n)$. Then \begin{align*} (ab)x=&amp;ab(x_1,\cdots,x_n)=((ab)x_1,\cdots,(ab)x_n)\\ =&amp;(a(bx_1),\cdots,a(bx_n))=a(bx_1,\cdots,bx_n)\\ =&amp;a(bx). \end{align*}</p>
+<hr />
+<p>14. Show that $1x=x$ for all $x\in\mathbb F^n$.</p>
+<p> Solution: Suppose $x=(x_1,\cdots,x_n)$. Then \[ 1x=1(x_1,\cdots,x_n)=(1\cdot x_1,\cdots,1\cdot x_n)=(x_1,\cdots,x_n)=x. \]</p>
+<hr />
+<p>15. Show that $\lambda(x+y)=\lambda x+\lambda y$ for all $\lambda\in\mathbb F$ and all $\lambda\in\mathbb F^n$.</p>
+<p> Solution: Suppose $x=(x_1,\cdots,x_n)$ and $y=(y_1,\cdots,y_n)$. Then \begin{align*} \lambda(x+y)=&amp;\lambda((x_1,\cdots,x_n)+(y_1,\cdots,y_n))\\ =&amp;\lambda(x_1+y_1,\cdots,x_n+y_n)=(\lambda(x_1+y_1),\cdots,\lambda(x_n+y_n))\\ =&amp;(\lambda x_1,\cdots,\lambda x_n)+(\lambda y_1,\cdots,\lambda y_n)\\ =&amp;\lambda x+\lambda y. \end{align*}</p>
+
+<hr />
+<p>16. Show that $(a+b)x=ax+bx$ for all $a,b\in\mathbb  F$ and all $x\in\mathbb  F^n$.</p>
+<p> Solution: Suppose $x=(x_1,\cdots,x_n)$. Then \begin{align*} (a+b)x=&amp;(a+b)(x_1,\cdots,x_n)=((a+b)x_1,\cdots,(a+b)x_n)\\ =&amp;(ax_1+bx_1,\cdots,ax_n+bx_n)\\ =&amp;(ax_1,\cdots,ax_n)+(bx_1,\cdots,bx_n)\\ =&amp;a(x_1,\cdots,x_n)+b(x_1,\cdots,x_n)\\ =&amp;ax+bx. \end{align*}</div>
+</p>
+<center><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- IH -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-5289197296725423"
+     data-ad-slot="8213787797"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></center>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'linearalg';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<script type="text/x-mathjax-config">
+                    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],scale: 90, linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50), },
+                    tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                     TeX: {  equationNumbers: {autoNumber: ["AMS"], useLabelIds: true},noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}",beqn:"\\begin{eqnarray}",eeqn:"\\end{equation}",beq:"\\begin{eqnarray}",eeq:"\\end{eqnarray}",be:"\\begin{equation}",ee:"\\end{eqnarray}",ca:"\\mathcal",m:"\\mathrm",mf:"\\mathbf",mb:"\\mathbb",N:"{\\mathbb{N}}",Z:"{\\mathbb{Z}}",R:"{\\mathbb{R}}",C:"{\\mathbb{C}}",vp:"{\\varphi}",e:"{\\epsilon}" } },
+                                        messageStyle: "none"
+                }); 
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+</script></script><script type='text/x-mathjax-config'>
+    MathJax.Hub.Config({
+        TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}},
+        "HTML-CSS": {linebreaks: {automatic: true}},
+        SVG: {linebreaks: {automatic: true}}
+    });
+</script>
+</body>
+</html>
