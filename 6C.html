@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta name="description" content="Solutions to Linear Algebra Done Right 3rd version, Chapter 6, exercise C"/>
+<link rel="canonical" href="http://linearalgebras.com/6C.html" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Solutions to Linear Algebra Done Right Chapter 6 exercise C" />
+<meta property="og:description" content="Solutions to Linear Algebra Done Right 3rd version, Chapter 6, exercise C" />
+<meta property="og:url" content="http://linearalgebras.com/6C.html" />
+<meta property="og:site_name" content="Solutions to Linear Algebra Done Right 3rd Edition" />
+<meta property="article:tag" content="Chapter 6" />
+<meta property="article:tag" content="Solution" />
+<meta property="article:section" content="Linear Algebra" />
+<meta property="article:published_time" content="2014-12-07T15:53:58+00:00" />
+<meta property="article:modified_time" content="2015-05-09T11:11:19+00:00" />
+<meta property="og:updated_time" content="2015-05-09T11:11:19+00:00" />
+
+<title>Solutions to Linear Algebra Done Right 3rd Edition</title>
+
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+
+</head>
+
+<body>
+<h1>Solutions to Linear Algebra Done Right 3rd Edition</h1>
+
+<h2 align="right">Chapter 6 Exercise C</h2>
+<hr/>
+<p>3. Suppose $U$ is a subspace of $V$ with basis $u_1,\cdots,u_m$ and $u_1,\cdots,u_m,w_1,\cdots,w_n$ is a basis of $V$. Prove that if the Gram–Schmidt Procedure is applied to the basis of $V$ above, producing a list $e_1,\cdots e_m,f_1,\cdots,f_n$, then $e_1,\cdots e_m$, is an orthonormal basis of $U$ and $f_1,\cdots,f_n$ is an orthonormal basis of $U^{\perp}$.</p>
+<p>Solution: By 6.31, we have \[ \m{span}(e_1,\cdots e_m)=\m{span}(u_1,\cdots,u_m)=U. \]Note that $e_1,\cdots e_m$ is an orthonormal list, it follows that $e_1,\cdots e_m$, is an orthonormal basis of $U$. By 6.47, we have $V=U\oplus U^{\perp}$. As $e_1,\cdots e_m,f_1,\cdots,f_n$ is an orthonormal list, it follows that \[\m{span}(f_1,\cdots,f_n)\subset U^{\perp}\]by definition. Oh the other hand, $V=U\oplus U^{\perp}$ implies \[\dim V=\dim U+\dim U^{\perp}\Longrightarrow m+n=m+\dim U^{\perp}.\]This means $\dim U^{\perp}=n$. Note that \[\dim \m{span}(f_1,\cdots,f_n)=n\]and\[\m{span}(f_1,\cdots,f_n)\subset U^{\perp},\]we conclude\[\m{span}(f_1,\cdots,f_n)= U^{\perp}.\]Thus $f_1,\cdots,f_n$ is an orthonormal basis of $U^{\perp}$.</p>
+<hr />
+<p>5. Suppose $V$ is finite-dimensional and $U$ is a subspace of $V$. Show that $P_{U^{\perp}}=I-P_{U}$, where $I$ is the identity operator on $V$.</p>
+<p>Solution: By 6.47, we have $V=U\oplus U^{\perp}$. For any $v\in V$, $v$ can be written as $v=u+w$, where $u\in U$ and $w\in U^{\perp}$. By the definition of orthogonal projection, we have $P_U(v)=u$. By 6.51, we have $(U^{\perp})^{\perp}=U$, hence $P_{U^{\perp}}(v)=w$ as $w\in U^{\perp}$ and $v\in U=(U^{\perp})^{\perp}$. Hence \[ P_{U^{\perp}}(v)=w=(u+w)-u=I(v)-P_U(v)=(I-P_U)(v). \]As $v$ is chosen arbitrarily, it follows that $P_{U^{\perp}}=I-P_{U}$.</p>
+<hr />
+<p>8. Suppose $V$ is finite-dimensional and $P\in\ca L(V)$ is such that $P^2=P$ and\[\|Pv\|\le\|v\|\] for every $v \in V$. Prove that there exists a subspace $U$ of $V$ such that $P=P_U$.</p>
+<p>Solution: By <a title="EXERCISES OF CHAPTER 5 A" href="/5A.html" target="_blank">Exercise 5B.4</a>, we have \[V=\m{null}P\oplus\m{range}P.\]Hence for any $u\in \m{null}P$ and $w\in \m{range}P$. By assumption, we have \[ \|w\|=\|P(\lambda u+ w)\|\le\|\lambda u+w\| \]for any $\lambda\in\mb F$. By <a title="EXERCISES OF CHAPTER 6 A" href="/6A.html" target="_blank">Exercise 6A.6</a>, it follows that $\langle u,w\rangle=0$. As $u,w$ are chosen arbitrarily, we deduce that $\m{null}P\perp\m{range}P$. Now we can choose $U=\m{null}P$ and it is obvious that $P=P_U$ now.</p>
+<p>Solution: See <a title="Linear Algebra Done Right Solution Manual " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 6 Problem 18.</p>
+<hr />
+<p>9.Suppose $T\in\ca L(V)$ and $U$ is a finite-dimensional subspace of $V$. Prove that $U$ is invariant under $T$ if and only if $P_UTP_U=TP_U$.</p>
+<p>Solution: If $U$ is invariant under $T$. Then for any $v\in V$, we can express it as $v=u+w$, where $u\in U$ and $w\in U^\perp$. Since $U$ is invariant under $T$, it follows that $Tu\in U$. By definition of orthogonal projection, we have \[ P_UTP_U(v)=P_UT(u)=T(u) \]and $TP_U(v)=Tu$. Hence $P_UTP_U(v)=TP_U(v)$ for any $v\in V$, i.e. $P_UTP_U=TP_U$.</p>
+<p>Suppose $P_UTP_U=TP_U$, then for any $u\in U$, we have $P_U(u)=u$. Hence \[P_UTP_U(u)=P_U(Tu)\]and $TP_U(u)=Tu$. That implies $P_U(Tu)=Tu$, hence $Tu\in U$ by 6.55 (d). Therefore $U$ is invariant under $T$.</p>
+<p>Solution: See <a title="Linear Algebra Done Right Solution Manual " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 6 Problem 19.</p>
+<hr />
+<p>10. Suppose $V$ is finite-dimensional, $T\in\ca L(V)$, and $U$ is a subspace of $V$. Prove that $U$ and $U^{\perp}$ are both invariant under $T$ if and only if $P_UT=TP_U$.</p>
+<p>Solution: See <a title="Linear Algebra Done Right Solution Manual " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 6 Problem 20.</p>
+<hr />
+<p>11. In $\R^4$, let \[U=\m{span}((1,1,0,0),(1,1,1,2)).\] Find $u\in U$ such that $\|u -(1,2,3,4)\|$ is as small as possible.</p>
+<p>Solution: See <a title="Linear Algebra Done Right Solution Manual " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 6 Problem 21.</p>
+<hr />
+<p>12. Find $p\in\ca P_3(\R)$ such that $p(0)=0$, $p'(0)=0$, and \[\int_0^1|2+3x-p(x)|^2dx\] is as small as possible.</p>
+<p>Solution: See <a title="Linear Algebra Done Right Solution Manual " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 6 Problem 22.</p>
+<hr />
+<p>13. Find $p\in\ca P_5(\R)$ that makes \[\int_{-\pi}^{\pi}|\sin x-p(x)|^2dx\] as small as possible.[The polynomial 6.60 is an excellent approximation to the answer to this exercise, but here you are asked to find the exact solution, which involves powers of $\pi$. A computer that can perform symbolic integration will be useful.]</p>
+<p>Solution: See <a title="Linear Algebra Done Right Solution Manual " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 6 Problem 23.</p>
+<hr />
+<p>14. Suppose $C_{\R}[-1,1]$ is the vector space of continuous real-valued functions on the interval $[-1,1]$ with inner product given by \[\langle f,g\rangle=\int_{-1}^1 f(x)g(x)dx\]for $f,g\in C_{\R}[-1,1]$. Let $U$ be the subspace of $C_{\R}[-1,1]$ defined by \[ U=\{f\in C_{\R}[-1,1]:f(0)=0\}. \] (a) Show that $U^{\perp}=0$.</p>
+<p>(b) Show that 6.47 and 6.51 do not hold without the finite-dimensional hypothesis.</p>
+<p>Solution: (a) Let $\vp\in U^{\perp}$, by continuity it suffices to show that $\vp(x)=0$ for all $x\in (-1,0)\cup (0,1)$. Suppose $\vp(x_0)=\xi\ne 0$ for some $x_0\in (-1,0)\cup (0,1)$. Then there exist a $\delta&gt;0$ such that $(x_0-\delta,x_0+\delta)\subset (-1,0)\cup (0,1)$ and $\vp(x)\ge \xi/2$ for all $x\in [x_0-\delta,x_0+\delta]$. Define $f\in C_{\R}[-1,1]$ by \[ f(x)=\left\{ \begin{array}{ll} 0, &amp; \hbox{$x\in[-1,x_0-\delta]\cup [x_0+\delta,1]$;} \\ (x-x_0+\delta)/\delta, &amp; \hbox{$x\in [x_0-\delta,x_0]$;} \\ (-x+x_0+\delta)/\delta, &amp; \hbox{$x\in [x_0,x_0+\delta]$.} \end{array} \right. \]Then $f\in U$ and $f(x)\ge 1/2$ for $x\in [x_0-\delta/2,x_0+\delta/2]$. Hence \[ \langle f,\vp\rangle =\int_{-1}^1 f(x)\vp(x)dx\ge \int_{x_0-\delta/2}^{x_0+\delta/2} f(x)\vp(x)dx\ge \delta\xi/4&gt;0. \]Hence we get a contradiction, thus completing the proof. (b) Use $U$ as a counterexample.</p>
+<center><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- IH -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-5289197296725423"
+     data-ad-slot="8213787797"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></center><div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'linearalg';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<script type="text/x-mathjax-config">
+                    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],scale: 90, linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50), },
+                    tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                     TeX: {  equationNumbers: {autoNumber: ["AMS"], useLabelIds: true},noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}",beqn:"\\begin{eqnarray}",eeqn:"\\end{equation}",beq:"\\begin{eqnarray}",eeq:"\\end{eqnarray}",be:"\\begin{equation}",ee:"\\end{eqnarray}",ca:"\\mathcal",m:"\\mathrm",mf:"\\mathbf",mb:"\\mathbb",N:"{\\mathbb{N}}",Z:"{\\mathbb{Z}}",R:"{\\mathbb{R}}",C:"{\\mathbb{C}}",vp:"{\\varphi}",e:"{\\epsilon}" } },
+                                        messageStyle: "none"
+                }); 
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+</script></script><script type='text/x-mathjax-config'>
+    MathJax.Hub.Config({
+        TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}},
+        "HTML-CSS": {linebreaks: {automatic: true}},
+        SVG: {linebreaks: {automatic: true}}
+    });
+</script>
+</body>
+</html>
