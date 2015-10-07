@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta name="description" content="Solutions to Linear Algebra Done Right 3rd version, Chapter 1, exercise 1B"/>
+<link rel="canonical" href="http://linearalgebras.com/1B.html" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Solutions to Linear Algebra Done Right Chapter 1 exercise B" />
+<meta property="og:description" content="Solutions to Linear Algebra Done Right 3rd version, Chapter 1, exercise 1B" />
+<meta property="og:url" content="http://linearalgebras.com/1B.html" />
+<meta property="og:site_name" content="Solutions to Linear Algebra Done Right 3rd Edition" />
+<meta property="article:tag" content="Chapter 1" />
+<meta property="article:tag" content="Solution" />
+<meta property="article:section" content="Linear Algebra" />
+<meta property="article:published_time" content="2014-12-07T15:53:58+00:00" />
+<meta property="article:modified_time" content="2015-05-09T11:11:19+00:00" />
+<meta property="og:updated_time" content="2015-05-09T11:11:19+00:00" />
+
+<title>Solutions to Linear Algebra Done Right 3rd Edition</title>
+
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+
+</head>
+
+<body>
+<h1>Solutions to Linear Algebra Done Right 3rd Edition</h1>
+
+<h2 align="right">Chapter 1 Exercise B</h2>
+<hr/>
+<div>1. Prove that $-(-v)=v$ for every $v\in V$.</div>
+<div>Solution: By definition, we have\[(-v)+(-(-v))=0\quad\text{and}\quad v+(-v)=0.\]This implies both $v$ and $-(-v)$ are additive inverses of $-v$, by the uniqueness of additive inverse, it follows that $-(-v)=v$.</div>
+<hr />
+<p>2. Suppose $a\in\mathbb F$, $v\in V$, and $av=0$. Prove that $a=0$ or $v=0$.</p>
+<p>Solution: If $a\ne 0$, then $a$ has inverse $a^{-1}$ such that $a^{-1}a=1$. Hence \[v=1\cdot v=(a^{-1}a)v=a^{-1}(av)=a^{-1}\cdot 0=0.\]Here we use associativity in 1.19 and and 1.30.</p>
+<hr />
+<p>3. Suppose $v,w\in V$. Explain why there exists a unique $x\in V$ such that $v+3x=w$.</p>
+<div> Solution: Let $x=\dfrac{1}{3}(w-v)$, then \[v+3x=v+3\cdot \dfrac{1}{3}(w-v)=v+(w-v)=w.\]This shows existence. Now we show uniqueness. Suppose, we have another vector $x&#8217;$ such that $v+3x&#8217;=w$. Then $v+3x&#8217;=w$ implies $3x&#8217;=w-v$. Similarly, $3x=w-v$. Hence \[3(x-x&#8217;)=3x-3x&#8217;=(w-v)-(w-v)=0.\]By Problem 2, it follows that $x-x&#8217;=0$. This shows uniqueness.</div>
+<hr />
+<p>4. The empty set is not a vector space. The empty set fails to satisfy only one of the requirements listed in 1.19. Which one?</p>
+<div> Solution: Additive identity: there exists an element $0\in V$ such that $v+0=v$ for all $v\in V$ ; This means $V$ cannot be empty.</div>
+<hr />
+<p>5. Show that in the definition of a vector space (1.19), the additive inverse condition can be replaced with the condition that\begin{equation}\label{1B51}0v=0\quad \text{for all}~v\in V.\end{equation} Here the $0$ on the left side is the number $0$, and the $0$ on the right side is the additive identity of $V$. (The phrase “a condition can be replaced” in a definition means that the collection of objects satisfying the definition is unchanged if the original condition is replaced with the new condition.)</p>
+
+<div>Solution: If we assume the additive inverse condition, we already show $(\ref{1B51})$ in 1.29. Now we assume $(\ref{1B51})$ and then show additive inverse condition. Since we have $(\ref{1B51})$, we have \[ v+((-1)v)=1v+((-1)v)=(1+(-1))v=0v=0, \]this means the existence of additive inverse, i.e. the additive inverse condition.</div>
+
+<hr />
+<p>6. Let $\infty$ and $-\infty$ denote two distinct objects, neither of which is in $\mathbb R$. Define an addition and scalar multiplication on $\mathbb R\cup \{\infty\}\cup\{\infty\}$ as you could guess from the notation. Specifically, the sum and product of two real numbers is as usual, and for $t\in\mathbb R$ define \[ t\infty=\left\{ \begin{array}{ll} -\infty, &amp; \hbox{if $t&lt;0$,} \\ 0, &amp; \hbox{if $t=0$,} \\ \infty, &amp; \hbox{if $t&gt;0$,} \end{array} \right. \quad t(-\infty)=\left\{ \begin{array}{ll} \infty, &amp; \hbox{if $t&lt;0$,} \\ 0, &amp; \hbox{if $t=0$,} \\ -\infty, &amp; \hbox{if $t&gt;0$,} \end{array} \right. \] \[t+\infty=\infty+t=\infty,\quad t+(-\infty)=(-\infty)+t=-\infty,\] \[\infty+\infty=\infty,\quad (-\infty)+(-\infty)=-\infty,\quad \infty+(-\infty)=0.\]Is $\mathbb R\cup \{\infty\}\cup\{\infty\}$ a vector space over $\mathbb R$? Explain.</p>
+<div>Solution: This is not a vector space over $\mathbb R$. Consider the distributive properties in 1.19. If this is a vector space over $\mathbb R$, we will have \[\infty=(2+(-1))\infty=2\infty+(-1)\infty=\infty+(-\infty)=0.\]Hence for any $t\in\mathbb R$, one has\[t=0+t=\infty+t=\infty=0.\]We get a contradiction.</div>
+<center><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- IH -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-5289197296725423"
+     data-ad-slot="8213787797"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></center>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'linearalg';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<script type="text/x-mathjax-config">
+                    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],scale: 90, linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50), },
+                    tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                     TeX: {  equationNumbers: {autoNumber: ["AMS"], useLabelIds: true},noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}",beqn:"\\begin{eqnarray}",eeqn:"\\end{equation}",beq:"\\begin{eqnarray}",eeq:"\\end{eqnarray}",be:"\\begin{equation}",ee:"\\end{eqnarray}",ca:"\\mathcal",m:"\\mathrm",mf:"\\mathbf",mb:"\\mathbb",N:"{\\mathbb{N}}",Z:"{\\mathbb{Z}}",R:"{\\mathbb{R}}",C:"{\\mathbb{C}}",vp:"{\\varphi}",e:"{\\epsilon}" } },
+                                        messageStyle: "none"
+                }); 
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+</script></script><script type='text/x-mathjax-config'>
+    MathJax.Hub.Config({
+        TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}},
+        "HTML-CSS": {linebreaks: {automatic: true}},
+        SVG: {linebreaks: {automatic: true}}
+    });
+</script>
+</body>
+</html>
