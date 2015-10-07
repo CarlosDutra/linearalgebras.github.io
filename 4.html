@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta name="description" content="Solutions to Linear Algebra Done Right 3rd version, Chapter 4, exercise"/>
+<link rel="canonical" href="http://linearalgebras.github.io/4.html" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Solutions to Linear Algebra Done Right Chapter 4 exercise" />
+<meta property="og:description" content="Solutions to Linear Algebra Done Right 3rd version, Chapter 4, exercise" />
+<meta property="og:url" content="http://linearalgebras.github.io/4.html" />
+<meta property="og:site_name" content="Solutions to Linear Algebra Done Right 3rd Edition" />
+<meta property="article:tag" content="Chapter 4" />
+<meta property="article:tag" content="Solution" />
+<meta property="article:section" content="Linear Algebra" />
+<meta property="article:published_time" content="2014-12-07T15:53:58+00:00" />
+<meta property="article:modified_time" content="2015-05-09T11:11:19+00:00" />
+<meta property="og:updated_time" content="2015-05-09T11:11:19+00:00" />
+
+<title>Solutions to Linear Algebra Done Right 3rd Edition</title>
+
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+
+</head>
+
+<body>
+<h1>Solutions to Linear Algebra Done Right 3rd Edition</h1>
+
+<h2 align="right">Chapter 4 Exercise </h2>
+<hr/>
+<p>1. Verify all the assertions in 4.5 except the last one.</p>
+<hr />
+<p>2. Suppose $m$ is a positive integer. Is the set \[\{0\}\cup\{p\in\ca P(\mb F):\deg p=m\}\] a subspace of $\ca P(\mb F)$?</p>
+<p>Solution: False. Consider $1=(z^m+1)+(-z^m)\notin \{0\}\cup\{p\in\ca P(\mb F):\deg p=m\}$. Note that \[(z^m+1)\in \{0\}\cup\{p\in\ca P(\mb F):\deg p=m\}\]and\[-z^m\in \{0\}\cup\{p\in\ca P(\mb F):\deg p=m\},\]it follows that $\{0\}\cup\{p\in\ca P(\mb F):\deg p=m\}$ is not closed under addition. Hence it is not a subspace of $\ca P(\mb F)$.</p>
+<hr />
+<p>3. Suppose $m$ is a positive integer. Is the set \[\{0\}\cup\{p\in\ca P(\mb F):\deg p\text{~is even}\}\] a subspace of $\ca P(\mb F)$?</p>
+<p>Solution: False. Consider $z=(z^{2}+z)+(-z^2)\notin \{0\}\cup\{p\in\ca P(\mb F):\deg p\text{~is even}\}$. Note that \[(z^2+z)\in \{0\}\cup\{p\in\ca P(\mb F):\deg p\text{~is even}\}\]and\[-z^2\in \{0\}\cup\{p\in\ca P(\mb F):\deg p\text{~is even}\},\]it follows that $\{0\}\cup\{p\in\ca P(\mb F):\deg p\text{~is even}\}$ is not closed under addition. Hence it is not a subspace of $\ca P(\mb F)$.</p>
+<hr />
+<p>4. Suppose $m$ and $n$ are positive integers with $m\leqslant n$, and suppose $\lambda_1$, $\cdots$, $\lambda_{m}$. Prove that there exists a polynomial $p\in\ca P(\mb F)$ with $\deg p=n$ such that $0=p(\lambda_1)=\cdots=p(\lambda_{m})$ and such that $p$ has no other zeros.</p>
+<p>Solution: Define $p\in\ca P(\mb F)$ by \[p(z)=(z-\lambda_1)^{n-m+1}(z-\lambda_2)\cdots(z-\lambda_m).\]Then $p$ is a polynomial of degree $n$ such that $0=p(\lambda_1)=\cdots=p(\lambda_{m})$ and such that $p$ has no other zeros.</p>
+<hr />
+<p>5. Suppose $m$ is a nonnegative integer, $z_1$, $\cdots$, $z_{m+1}$ are distinct elements of $\mb F$, and $w_1$, $\cdots$, $w_{m+1}\in\mb F$. Prove that there exists a unique polynomial $p\in\ca P_m(\mb F)$ such that \[p(z_j)=w_j\] for $j=1,\cdots,m+1$. [<i>This result can be proved without using linear algebra. However, try to find the clearer, shorter proof that uses some linear algebra</i>.]</p>
+<p>Solution: See <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=0CB8QFjAA&amp;url=http%3A%2F%2Fmath-test.googlecode.com%2Ffiles%2FLinear%2520Algebra%2520Done%2520Right%25202e%2520Solutions%2520Manual.pdf&amp;ei=LwbPVM_BOobpoASBo4GoDw&amp;usg=AFQjCNEyhX3mkQSiAud6C__SWg2_gDOyzA&amp;sig2=KRymPt4Z7Z9GSKF6Wa1FMA" target="_blank" rel="nofollow">Linear Algebra Done Right Solution Manual</a> Chapter 4 Problem 2.</p>
+<hr />
+<p>6. Suppose $p\in\ca P(\C)$ has degree $m$. Prove that $p$ has $m$ distinct zeros if and only if $p$ and its derivative $p&#8217;$ have no zeros in common.</p>
+<p>Solution: See <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=0CB8QFjAA&amp;url=http%3A%2F%2Fmath-test.googlecode.com%2Ffiles%2FLinear%2520Algebra%2520Done%2520Right%25202e%2520Solutions%2520Manual.pdf&amp;ei=LwbPVM_BOobpoASBo4GoDw&amp;usg=AFQjCNEyhX3mkQSiAud6C__SWg2_gDOyzA&amp;sig2=KRymPt4Z7Z9GSKF6Wa1FMA" target="_blank" rel="nofollow">Linear Algebra Done Right Solution Manual</a> Chapter 4 Problem 4.</p>
+<hr />
+<p>7. Prove that every polynomial of odd degree with real coefficients has a real zero.</p>
+<p>Solution: See <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=0CB8QFjAA&amp;url=http%3A%2F%2Fmath-test.googlecode.com%2Ffiles%2FLinear%2520Algebra%2520Done%2520Right%25202e%2520Solutions%2520Manual.pdf&amp;ei=LwbPVM_BOobpoASBo4GoDw&amp;usg=AFQjCNEyhX3mkQSiAud6C__SWg2_gDOyzA&amp;sig2=KRymPt4Z7Z9GSKF6Wa1FMA" target="_blank" rel="nofollow">Linear Algebra Done Right Solution Manual</a> Chapter 4 Problem 5.</p>
+<hr />
+<p>8. Define $T:\ca P(\R)\to\R^\R$ by \[ Tp=\left\{ \begin{array}{ll} \dfrac{p-p(3)}{x-3}, &amp; \hbox{if $x\ne 3$.} \\ p'(3), &amp; \hbox{if $x=3$.} \end{array} \right. \] Show that $Tp \in\ca P(\R)$ for every polynomial $p \in\ca P(\R)$ and that $T$ is a linear map.</p>
+<p>Solution: First we show that $T$ is a linear map. Then we show $Tp \in\ca P(\R)$ for a basis of $p \in\ca P(\R)$, then by linearity of $T$, we have $Tp \in\ca P(\R)$ for every polynomial $p \in\ca P(\R)$. For any $\lambda\in\R$ and $p,q\in\ca P(\R)$, we have \begin{align*} T(p+q)=&amp;\dfrac{(p+q)-(p+q)(3)}{x-3}=\dfrac{(p+q)-p(3)-q(3)}{x-3}\\ =&amp;\dfrac{p-p(3)}{x-3}+\dfrac{q-q(3)}{x-3}=Tp+Tq, \end{align*} if $x\ne 3$. Similarly, \[T(\lambda p)=\dfrac{(\lambda p)-(\lambda p)(3)}{x-3}=\dfrac{\lambda p-\lambda p(3)}{x-3}=\lambda\dfrac{p-p(3)}{x-3}=\lambda Tp.\]If $x=3$, then $T$ is a composition of the differentiation map and evaluation map. Both of them are linear, hence $T$ is also linear. We can show it directly \[ T(\lambda p+q)=(\lambda p+q)'(3)=(\lambda p&#8217;+q&#8217;)(3)=\lambda p'(3)+q'(3)=\lambda Tp+Tq. \]Therefore $T$ is a linear map. Let us consider $Tx^n$ for $n\in \mb N^+$, if $x\ne 3$, \[T(x^n)=\frac{x^n-3^n}{x-3}=x^{n-1}+3x^{n-2}+\cdots+3^kx^{n-1-k}+\cdots+3^{n-1}\in\ca P(\R).\] Moreover, if $x=3$, we have $T(x^n)=3^{n-1}n$. Note that when $x=3$, it is true that\[ x^{n-1}+3x^{n-2}+\cdots+3^kx^{n-1-k}+\cdots+3^{n-1}=3^{n-1}n. \]We get \[T(x^n)=x^{n-1}+3x^{n-2}+\cdots+3^kx^{n-1-k}+\cdots+3^{n-1}\in\ca P(\R)\]for $x\in \R$. Similarly, we can show $T(1)=0\in \ca P(\R)$. Since any polynomial of $\ca P(\R)$ is a linear combination of $1$, $x$, $x^2$, $\cdots$, it follows that $Tp \in\ca P(\R)$ for every polynomial $p \in\ca P(\R)$.</p>
+<blockquote><p>I am not sure the textbook indicates that $1$, $x$, $x^2$, $\cdots$ is a basis of $\ca P(\R)$, so I use some easier arguments such as any polynomial of $\ca P(\R)$ is a linear combination of $1$, $x$, $x^2$, $\cdots$.</p></blockquote>
+<hr />
+<p>9. Suppose $p\in\ca P(\C)$. Define $q:\C \to \C$ by \[q(z)=f(z)\overline{f(\bar{z})}.\] Prove that $q$ is a polynomial with real coefficients.</p>
+<p>Solution: If $f(z)=a_nz^n+\cdots+a_1z+a_0$, where $a_n,\cdots,a_0\in\C$, then \[\overline{f(\bar{z})}=\overline{a_n}z^n+\cdots+\overline{a_1}z+\overline{a_0}.\]That implies $\overline{f(\bar{z})}$ is a polynomial. As the product of polynomials is a polynomial as well, we conclude $q$ is a polynomial.</p>
+<p>Now let us show $q$ has only real coefficients. Denote $q(z)$ by \[q(z)=\mu_{2n}z^{2n}+\cdots+\mu_1z+\mu_0.\]Note that $\overline{q(\bar{z})}=\overline{f(\bar{z})\overline{f(z)}}=\overline{f(\bar{z})}f(z)=q(z)$, it follows \[ \overline{\mu_{2n}}z^{2n}+\cdots+\overline{\mu_1}z+\overline{\mu_0}=\mu_{2n}z^{2n}+\cdots+\mu_1z+\mu_0. \]Hence $\overline{\mu_k}=\mu_k$, i.e $\mu_k\in \R$, for $k=0,\cdots,2n$.</p>
+<blockquote><p>Here you can also compute the coefficients $\mu_k$ as a expression by $a_i$ and show $\mu_k=\overline{\mu_k}$ or use some calculus methods.</p></blockquote>
+<center><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- IH -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-5289197296725423"
+     data-ad-slot="8213787797"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></center>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'linearalg';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<script type="text/x-mathjax-config">
+                    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],scale: 90, linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50), },
+                    tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                     TeX: {  equationNumbers: {autoNumber: ["AMS"], useLabelIds: true},noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}",beqn:"\\begin{eqnarray}",eeqn:"\\end{equation}",beq:"\\begin{eqnarray}",eeq:"\\end{eqnarray}",be:"\\begin{equation}",ee:"\\end{eqnarray}",ca:"\\mathcal",m:"\\mathrm",mf:"\\mathbf",mb:"\\mathbb",N:"{\\mathbb{N}}",Z:"{\\mathbb{Z}}",R:"{\\mathbb{R}}",C:"{\\mathbb{C}}",vp:"{\\varphi}",e:"{\\epsilon}" } },
+                                        messageStyle: "none"
+                }); 
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+</script></script><script type='text/x-mathjax-config'>
+    MathJax.Hub.Config({
+        TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}},
+        "HTML-CSS": {linebreaks: {automatic: true}},
+        SVG: {linebreaks: {automatic: true}}
+    });
+</script>
+</body>
+</html>
