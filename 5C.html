@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta name="description" content="Solutions to Linear Algebra Done Right 3rd version, Chapter 5, exercise C"/>
+<link rel="canonical" href="http://linearalgebras.com/5C.html" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Solutions to Linear Algebra Done Right Chapter 5 exercise C" />
+<meta property="og:description" content="Solutions to Linear Algebra Done Right 3rd version, Chapter 5, exercise C" />
+<meta property="og:url" content="http://linearalgebras.com/5C.html" />
+<meta property="og:site_name" content="Solutions to Linear Algebra Done Right 3rd Edition" />
+<meta property="article:tag" content="Chapter 5" />
+<meta property="article:tag" content="Solution" />
+<meta property="article:section" content="Linear Algebra" />
+<meta property="article:published_time" content="2014-12-07T15:53:58+00:00" />
+<meta property="article:modified_time" content="2015-05-09T11:11:19+00:00" />
+<meta property="og:updated_time" content="2015-05-09T11:11:19+00:00" />
+
+<title>Solutions to Linear Algebra Done Right 3rd Edition</title>
+
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+
+</head>
+
+<body>
+<h1>Solutions to Linear Algebra Done Right 3rd Edition</h1>
+
+<h2 align="right">Chapter 5 Exercise C</h2>
+<hr/>
+<p>1. Suppose $T\in \ca L(V)$ is diagonalizable. Prove that $V=\m{null} T \oplus\m{range} T$.</p>
+<p>Solution: It is not said $V$ is finite-dimensional, but I will do it by assuming $\dim V&lt;\infty$.</p>
+<p>If $T$ is invertible, then $\m{null}{T}=0$ and $\m{range} T=V$ since $T$ is bijective and surjective. Hence $V=\m{null} T \oplus\m{range} T$.</p>
+<p>If $T$ is not invertible, let $0$, $\lambda_1$, $\cdots$, $\lambda_m$ be all eigenvalues of $T$, where $\lambda_i\ne 0$ for $i=1,\cdots,m$. Then by 5.41(d), we have \begin{equation}\label{5CP11} V=E(0,T)\oplus E(\lambda_1,T)\oplus\cdots\oplus E(\lambda_m,T). \end{equation} By definition, it follows $E(0,T)=\m{null} T $. Moreover, for any $v_i\in E(\lambda_i,T)$, \[T\left(\frac{1}{\lambda_i}v_i\right)=\frac{1}{\lambda_i}Tv_i=v_i.\]This implies $E(\lambda_i,T)\subset \m{range} T$. Therefore \begin{equation}\label{5CP12} E(\lambda_1,T)\oplus\cdots\oplus E(\lambda_m,T)\subset \m{range} T.\end{equation} On the other hand, any $v\in V$ can be written as \[v=v_0+v_1+\cdots+v_m,\]where $v_0\in E(0,T)$ and $v_i\in E(\lambda_i,T)$ for $i=1,\cdots,m$. Hence \[T(v)=T(v_0+v_1+\cdots+v_m)=\lambda_1v_1+\cdots+\lambda_mv_m\in E(\lambda_1,T)\oplus\cdots\oplus E(\lambda_m,T).\]This implies \begin{equation}\label{5CP13} \m{range} T\subset E(\lambda_1,T)\oplus\cdots\oplus E(\lambda_m,T). \end{equation} By $(\ref{5CP12})$ and $(\ref{5CP13})$, we have \begin{equation}\label{5CP14} E(\lambda_1,T)\oplus\cdots\oplus E(\lambda_m,T)\subset \m{range} T.\end{equation}Combining $(\ref{5CP11})$ and $(\ref{5CP14})$, it follows that $V=\m{null} T \oplus\m{range} T$.</p>
+<blockquote><p>If we can show something like $(\ref{5CP11})$ for infinite-dimensional vector spaces, then we can deduce this problem for infinite-dimensional case by using similar arguments.</p></blockquote>
+<hr />
+<p>3. Suppose $V$ is finite-dimensional and $T\in\ca L(V)$. Prove that the following are equivalent:</p>
+<p>(a) $V=\m{null}T\oplus \m{range}T$;</p>
+<p>(b) $V=\m{null}T+ \m{range}T$;</p>
+<p>(c) $\m{null}T\cap \m{range}T=\{0\}$.</p>
+<p>Solution: (a) $\Longrightarrow$ (b): It is obvious.</p>
+<p>(b) $\Longrightarrow$ (c): By 3.22, we have \begin{equation}\label{5CP3.1}\dim V=\dim\m{null}T+ \dim\m{range}T.\end{equation} Note that $V=\m{null}T+ \m{range}T$ and 2.43, we have \begin{equation}\label{5CP3.2} \dim V=\dim\m{null}T+ \dim\m{range}T-\dim(\m{null}T\cap \m{range}T). \end{equation} By $(\ref{5CP3.1})$ and $(\ref{5CP3.2})$, we have $\dim(\m{null}T\cap \m{range}T)=0$. Hence $\m{null}T\cap \m{range}T=\{0\}$.</p>
+<p>(c) $\Longrightarrow$ (a): Again by 2.43 and 3.22, we have \[\dim (\m{null}T+ \m{range}T)=\dim\m{null}T+ \dim\m{range}T-\dim(\m{null}T\cap \m{range}T). \] and \[\dim V=\dim\m{null}T+ \dim\m{range}T.\] As $\dim(\m{null}T\cap \m{range}T)=0$, it follows that \[ \dim (\m{null}T+ \m{range}T)=\dim V. \]Hence $\m{null}T+ \m{range}T=V$, thus $\m{null}T\oplus \m{range}T=V$ since $\m{null}T\cap \m{range}T=\{0\}$.</p>
+<hr />
+<p>5.Suppose $V$ is a finite-dimensional complex vector space and $T\in\ca L(V)$. Prove that $T$ is diagonalizable if and only if \[V=\m{null}(T-\lambda I)\oplus \m{range}(T-\lambda I)\] for every $\lambda\in\C$.</p>
+<p>Solution: If $T$ is diagonalizable, so is $T-\lambda I$. Hence by problem 1, we have\[V=\m{null}(T-\lambda I)\oplus \m{range}(T-\lambda I)\] for every $\lambda\in\C$.</p>
+<blockquote><p>Lemma 1: Let $U,W,S$ be subspaces of $V$, if $V=U\oplus W$ and $U\subset S$, then $S=U\oplus (W\cap S)$.</p>
+<p>Proof of Lemma 1: For any $s\in S$, $s$ can be written as $u+w$, where $u\in U$ and $w\in W$, since $V=U\oplus W$. As $U\subset S$, it follows that $u\in S$. Hence $w=s-u\in S$, namely $w\in s\cap W$. This implies $S=U+ (W\cap S)$. Note that $U\cap W=\{0\}$, we have $S=U\oplus (W\cap S)$.</p></blockquote>
+<blockquote><p>Lemma 2: For $a,b\in\C$ such that $a\ne b$, we have $\m{null}(T-a I)\subset\m{range}(T-b I)$.</p>
+<p>Proof of Lemma 2: For any $v\in \m{null}(T-a I)$, we have $Tv=av$. Hence \[ (T-bI)\left(\frac{1}{a-b}v\right)=v, \]namely $v\in \m{range}(T-b I)$. Thus $\m{null}(T-a I)\subset\m{range}(T-b I)$.</p></blockquote>
+<p>Proof of Problem: Conversely, since $V$ is finite-dimensional, $T$ has only finitely many eigenvalues. Suppose $\lambda_1$, $\cdots$, $\lambda_m$ are all distinct eigenvalues of $T$. Note that we have \[ V=\m{null}(T-\lambda_1 I)\oplus \m{range}(T-\lambda_1 I) \]and $\m{null}(T-\lambda_2 I)\subset \m{range}(T-\lambda_1 I)$ (by Lemma 2), we have \[ \m{range}(T-\lambda_1 I)=\m{null}(T-\lambda_2 I)\oplus \m{range}(T-\lambda_1 I)\cap\m{range}(T-\lambda_2 I) \]by Lemma 1. Similarly, we also have \[ \m{null}(T-\lambda_3 I)\subset \m{range}(T-\lambda_1 I)\cap\m{range}(T-\lambda_2 I). \]By using Lemma 1 and Lemma 2 inductively, we have \begin{align*} V=&amp;\m{null}(T-\lambda_1 I)\oplus\cdots\oplus \m{null}(T-\lambda_m I)\oplus \\ &amp;(\m{range}(T-\lambda_1 I)\cap \cdots\cap \m{range}(T-\lambda_m I)). \end{align*} If $\m{range}(T-\lambda_1 I)\cap \cdots\cap \m{range}(T-\lambda_m I)=\{0\}$, we showed\[V=\m{null}(T-\lambda_1 I)\oplus\cdots\oplus \m{null}(T-\lambda_m I).\]Hence $T$ is diagonalizable. If $\Gamma=\m{range}(T-\lambda_1 I)\cap \cdots\cap \m{range}(T-\lambda_m I)\ne\{0\}$, then note that $(T-\lambda_i I)T=T(T-\lambda_i I)$, we have $\m{range}(T-\lambda_i I)$ is invariant under $T$ for all $i=1,\cdots,m$ by Problem 3 of Exercises 5A. Hence $\Gamma$ is invariant under $T$ by Problem 5 of Exercises 5A. Consider $T|_{\Gamma}$, it has an eigenvalue $\lambda\in\C$ with a corresponding eigenvector $\mu$ by 5.21. Hence $\lambda$ is also an eigenvalue of $T$. Suppose $\lambda=\lambda_i$ for some $i\in\{1,\cdots,m\}$. Then $\mu\in \m{null}(T-\lambda_i I)$, $\mu\in\Gamma$ and $\mu\ne 0$, this contradicts with\begin{align*} V=&amp;\m{null}(T-\lambda_1 I)\oplus\cdots\oplus \m{null}(T-\lambda_m I)\oplus \\ &amp;(\m{range}(T-\lambda_1 I)\cap \cdots\cap \m{range}(T-\lambda_m I)). \end{align*}Hence $\Gamma=0$ and therefore $T$ is diagonalizable.</p>
+<hr />
+<p>6. Suppose $V$ is finite-dimensional, $T\in\ca L(V)$ has $\dim V$ distinct eigenvalues, and $S\in\ca L(V)$ has the same eigenvectors as $T$ (not necessarily with the same eigenvalues). Prove that $ST=TS$.</p>
+<p>Solution: Since $T\in\ca L(V)$ has $\dim V$ distinct eigenvalues, then $T$ is diagonalizable by 5.44. Let $v_1$, $\cdots$, $v_{\dim V}$ be the basis of $V$ defined in the proof of 5.44, then $v_1$, $\cdots$, $v_{\dim V}$ are eigenvectors of $T$. As $S\in\ca L(V)$ has the same eigenvectors as $T$, $v_1$, $\cdots$, $v_{\dim V}$ are eigenvectors of $S$. Hence there exists $\lambda_1$, $\cdots$, $\lambda_{\dim V}\in\mb F$ and $\theta_1$, $\cdots$, $\theta_{\dim V}\in\mb F$ such that \[Tv_i=\lambda_i v_i\text{ and }Sv_i=\theta_iv_i,\quad i=1,\cdots,\dim V.\]Hence we have \[STv_i=S(\lambda_iv_i)=\lambda_iSv_i=\lambda_i\theta_iv_i,\quad i=1,\cdots,\dim V\] and \[ TSv_i=T(\theta_iv_i)=\theta_iTv_i=\theta_i\lambda_iv_i,\quad i=1,\cdots,\dim V. \]It follows that $STv_i=TSv_i$ for $i=1,\cdots,\dim V$. Note that $v_1$, $\cdots$, $v_{\dim V}$ is a basis of $V$, we deduce that $ST=TS$.</p>
+<hr />
+<p>8. Suppose $T\in\ca L(\mb F^5)$ and $\dim E(8,T)= 4$. Prove that $T-2I$ or $T-6I$ is invertible.</p>
+<p>Solution: Suppose $T-2I$ and $T-6I$ are not invertible, then $2$ and $6$ are eigenvalues of $T$. Note that $\lambda$ is an eigenvalue of $T$ if and only if $E(\lambda, T)\ne \{0\}$. Hence $\dim E(2,T)\ge 1$ and $\dim E(6,T)\ge 1$. By 5.38, we have \[ 4+1+1\le\dim E(8,T)+\dim E(2,T)+\dim E(6,T)\le \dim (\mb F^5)=5. \]This is impossible. Hence $T-2I$ or $T-6I$ is invertible.</p>
+<hr />
+<p>9. Suppose $T\in\ca L(V)$ is invertible. Prove that $E(\lambda,T)=E(1/\lambda,T^{-1})$ for every $\lambda\in\mb F$ with $\lambda\ne 0$.</p>
+<p>Solution: For every $\lambda\in\mb F$ with $\lambda\ne 0$, let $v\in E(\lambda,T)$. Then we have $Tv=\lambda v$. Note that $T$ is invertible and $\lambda\ne 0$, it follows that $\frac{1}{\lambda}v=T^{-1}v$. Hence $v\in E(1/\lambda,T^{-1})$, we conclude $E(\lambda,T)\subset E(1/\lambda,T^{-1})$. By symmetry, we also have $E(1/\lambda,T^{-1})\subset E(\lambda,T)$. To sum up, we deduce $E(\lambda,T)=E(1/\lambda,T^{-1})$ for every $\lambda\in\mb F$ with $\lambda\ne 0$.</p>
+<hr />
+<p>12. Suppose $R,T\in\ca L(\mb F^3)$ each have $2$, $6$, $7$ as eigenvalues. Prove that there exists an invertible operator $S\in\ca L(\mb F^3)$ such that $R=S^{-1}TS$.</p>
+<p>Solution: Note that $R$ and $T$ has three eigenvalues and $\dim(\mb F^3)=3$. By 5.44, we have $R$ and $T$ are diagonalizable. Hence there exist bases $e_1,e_2,e_3$ and $\xi_1,\xi_2,\xi_3$ such that \[Te_1=2e_1,Te_2=6e_2,Te_3=7e_3\]and \[R\xi_1=2\xi_1,R\xi_2=6\xi_2,R\xi_3=7\xi_3.\]Define $S\in\ca L(\mb F^3)$ by \[S\xi_i=e_i,\quad i=1,2,3.\]Then we have $S$ is invertible and $S^{-1}e_i=\xi_i$. Moreover, \[ S^{-1}TS\xi_1=S^{-1}Te_1=S^{-1}(2e_1)=2\xi_1=R\xi_1. \]Similarly $S^{-1}TS\xi_2=R\xi_2$ and $S^{-1}TS\xi_3=R\xi_3$. Hence $R=S^{-1}TS$ as they coincide in the basis $\xi_1,\xi_2,\xi_3$.</p>
+<hr />
+<p>13. Find $R,T\in\ca L(\mb F^4)$ such that $R$ and $T$ each have $2$, $6$, $7$ as eigenvalues, $R$ and $T$ have no other eigenvalues, and there does not exist an invertible operator $S\in\ca L(\mb F^4)$ such that $R=S^{-1}TS$.</p>
+<p>Solution: Let $e_1$, $e_2$, $e_3$, $e_4$ be a basis of $\mb F^4$, define $R,T\in\ca L(\mb F^4)$ by \[Re_1=2e_1,Re_2=2e_2,Re_3=6e_3,Re_4=7e_4\]and \[Te_1=2e_1,Te_2=2e_2+e_1,Te_3=6e_3,Te_4=7e_4.\]Then $R$ is diagonalizable. In fact $T$ is not diagonalizable since $\dim E(2,T)=1$, $\dim(6,T)=1$ and $\dim(7,T)=1$ imply \[ \dim(2,T)+\dim(6,T)+\dim(7,T)&lt;\dim(\mb F^4). \]If there exist an invertible operator $S\in\ca L(\mb F^4)$ such that $R=S^{-1}TS$, $\iff SRS^{-1}=T$, then $Se_1$, $Se_2$, $Se_3$, $Se_4$ is a basis of $\mb F^4$. Moreover, \[ T(Se_1)=SRS^{-1}(Se_1)=SRe_1=S(2e_1)=2Se_1. \]Similarly, \[ T(Se_2)=2Se_2,T(Se_3)=6Se_3,T(Se_4)=7Se_4. \]This implies $T$ is diagonalizable. Thus we get a contradiction. Hence there does not exist an invertible operator $S\in\ca L(\mb F^4)$ such that $R=S^{-1}TS$.</p>
+<hr />
+<p>14. Find $T\in \ca L(\C)$ such that 6 and 7 are eigenvalues of $T$ and such that $T$ does not have a diagonal matrix with respect to any basis of $\C^3$.</p>
+<p>Solution: Let $T\in \ca L(\C)$ defined by \[Te_1=6e_1,Te_2=6e_2+e_1,Te_3=7e_3,\]where $e_1$, $e_2$, $e_3$ is a basis of $\C^3$. Then for any nonzero $\alpha\in \C^3$, write $\alpha$ by $k_1e_1+k_2e_2+k_3e_3$, if there exists $\lambda\in\C$ such that $T\alpha=\lambda\alpha$, then we have \begin{equation}\label{5CP14.1} \lambda(k_1e_1+k_2e_2+k_3e_3)=T\alpha=(6k_1+k_2)e_1+6k_2e_2+7k_3e_3. \end{equation} If $k_3\ne 0$, then we have $\lambda k_3=7k_3$ by the previous equation. Hence $\lambda=7$. If $k_3=0$, we have \[ (6-\lambda)k_2=0\text{ and }(6-\lambda)k_1=-k_2. \]Note that $\alpha\ne 0$, it follows that $k_1$ or $k_2$ is not zero. If $k_2\ne 0$, then $\lambda=6$. If $k_1\ne 0$, then \[ (6-\lambda)^2k_1=(6-\lambda)(-k_2)=-(6-\lambda)k_2=0. \]Thus $\lambda =6$.</p>
+<p>By above, all the eigenvalues of $T$ are $6$ and $7$. Moreover, $\dim E(6,T)=1$ and $\dim E(7,T)=1$ by solving $(\ref{5CP14.1})$. That imples \[2=\dim E(6,T)+\dim E(7,T)&lt;\dim \C^3=3.\]Thus $T$ is not diagonalizable.</p>
+<hr />
+<p>15. Suppose $T\in\ca L(\C^3)$ is such that $6$ and $7$ are eigenvalues of $T$. Furthermore, suppose $T$ does not have a diagonal matrix with respect to any basis of $\C^3$. Prove that there exists $(x,y, z)\in\mb F^3$ (I think it would be $\mb\C^3$) such that\[ T(x,y,z)=(17+8x,\sqrt{5}+8y,2\pi+ 8z).\]Solution: Since $T$ does not have a diagonal matrix with respect to any basis of $\C^3$, $T$ is not diagonalizable. Hence $8$ is not an eigenvalue of $T$, otherwise $T$ has $3$ eigenvalues hence diagonalizable by 5.44. This implies $T-8I$ is surjective by 5.6. Hence there exists $(x,y, z)\in\mb C^3$ such that \[(T-8I)(x,y, z)=(17,\sqrt{5},2\pi),\]namely\[ T(x,y,z)=(17+8x,\sqrt{5}+8y,2\pi+ 8z).\]</p>
+<hr />
+<p>16. The Fibonacci sequence $F_1,F_2,\cdots$ is defined by \[ F_1=1,F_2=1,\text{ and }F_{n}=F_{n-1}+F_{n-2}\text{ for }n\ge 3. \] Define $T\in\ca L(\R^2)$ by $T(x,y)=(y,x+y)$.</p>
+<p>(a) Show that $T^n(0, 1)=(F_n,F_{n+1})$ for each positive integer $n$.</p>
+<p>(b) Find the eigenvalues of $T$.</p>
+<p>(c) Find a basis of $\R^2$ consisting of eigenvectors of $T$.</p>
+<p>(d) Use the solution to part (c) to compute $T^n(0, 1)$. Conclude that \[F_n=\frac{1}{\sqrt{5}}\left[\left(\frac{1+\sqrt{5}}{2}\right)^n-\left(\frac{1-\sqrt{5}}{2}\right)^n\right]\] for each positive integer $n$.</p>
+<p>(e) Use part (d) to conclude that for each positive integer $n$, the Fibonacci number $F_n$ is the integer that is closest to \[\frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^n.\]Solution: (a) We show this part by induction. Note that \[T(0,1)=(1,1)=(F_1,F_2).\]Hence it is true for $n=1$. Suppose we have $T^n(0,1)=(F_n,F_{n+1})$ then \begin{align*} T^{n+1}(0,1)=&amp;T(T^n(0,1))=T(F_{n},F_{n+1})\\=&amp;(F_{n+1},F_n+F_{n+1})=(F_{n+1},F_{n+2}). \end{align*}Hence if it is true for $n$, so is the case for $n+1$. Thus we get the conclusion by induction.</p>
+<p>(b) and (c) We need solve this equation \[T(x,y)=\lambda(x,y),\]where $(x,y)\ne (0,0)$ and $\lambda\in \R$. By definition of $T$, it is equivalent to \[ \left\{ \begin{array}{ll} \lambda x=y,\\ \lambda y=x+y. \end{array} \right. \]If $y=0$, then $x=0$ by the second equation. Hence $y\ne 0$, it follows that $x\ne 0$ and $\lambda\ne 0$. By the first equation, we have $x/y=1/\lambda$. By the second one we have $\lambda=x/y+1$. Hence we have \[\lambda=\frac{1}{\lambda}+1,\]the solutions for this equation are \[\lambda=\frac{1\pm\sqrt{5}}{2}.\]By $x/y=1/\lambda$, we have the eigenvectors corresponding to $\dfrac{1\pm\sqrt{5}}{2}$ are $\left(1,\dfrac{1\pm\sqrt{5}}{2}\right)$ respectively.</p>
+<p>(d) Denote $\left(1,\dfrac{1+\sqrt{5}}{2}\right)$ and $\left(1,\dfrac{1-\sqrt{5}}{2}\right)$ by $e_1$ and $e_2$ respectively. Then we have \[(0,1)=\frac{1}{\sqrt{5}}(e_1-e_2).\]It follows that \begin{align*} T^n(0,1)=&amp;T^n\left(\frac{1}{\sqrt{5}}(e_1-e_2)\right)=\frac{1}{\sqrt{5}}(T^ne_1-T^ne_2)\\ =&amp;\frac{1}{\sqrt{5}}\left[\left(\dfrac{1+\sqrt{5}}{2}\right)^ne_1-\left(\dfrac{1-\sqrt{5}}{2}\right)^ne_2\right]. \end{align*} By (a) and comparing the first component, we deduce that \begin{equation}\label{5CP161}F_n= \frac{1}{\sqrt{5}}\left[\left(\frac{1+\sqrt{5}}{2}\right)^n-\left(\frac{1-\sqrt{5}}{2}\right)^n\right]. \end{equation}(e) Note that $\sqrt{5}\geqslant 2$, we have \begin{equation}\label{5CP162} \frac{1}{\sqrt{5}}\left|\frac{1-\sqrt{5}}{2}\right|^n= \frac{1}{\sqrt{5}}\left|\frac{2}{1+\sqrt{5}}\right|^n\le\frac{1}{2}\times\frac{2}{3}&lt;\frac{1}{2}. \end{equation} Moreover, $F_n\in\mb Z$ is easily shown by induction. Combining $(\ref{5CP161})$ and $(\ref{5CP162})$, it follows that \[ \left|\frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^n-F_n\right|=\frac{1}{\sqrt{5}}\left|\frac{1-\sqrt{5}}{2}\right|^n&lt;\frac{1}{2} \]By $F_n\in\mb Z$, we deduce that the Fibonacci number $F_n$ is the integer that is closest to \[\frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^n.\]</p>
+<center><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- IH -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-5289197296725423"
+     data-ad-slot="8213787797"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></center><div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'linearalg';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<script type="text/x-mathjax-config">
+                    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],scale: 90, linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50), },
+                    tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                     TeX: {  equationNumbers: {autoNumber: ["AMS"], useLabelIds: true},noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}",beqn:"\\begin{eqnarray}",eeqn:"\\end{equation}",beq:"\\begin{eqnarray}",eeq:"\\end{eqnarray}",be:"\\begin{equation}",ee:"\\end{eqnarray}",ca:"\\mathcal",m:"\\mathrm",mf:"\\mathbf",mb:"\\mathbb",N:"{\\mathbb{N}}",Z:"{\\mathbb{Z}}",R:"{\\mathbb{R}}",C:"{\\mathbb{C}}",vp:"{\\varphi}",e:"{\\epsilon}" } },
+                                        messageStyle: "none"
+                }); 
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+</script></script><script type='text/x-mathjax-config'>
+    MathJax.Hub.Config({
+        TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}},
+        "HTML-CSS": {linebreaks: {automatic: true}},
+        SVG: {linebreaks: {automatic: true}}
+    });
+</script>
+</body>
+</html>
