@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta name="description" content="Solutions to Linear Algebra Done Right 3rd version, Chapter 2, exercise 2C"/>
+<link rel="canonical" href="http://linearalgebras.com/2C.html" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Solutions to Linear Algebra Done Right Chapter 2 exercise C" />
+<meta property="og:description" content="Solutions to Linear Algebra Done Right 3rd version, Chapter 2, exercise 2C" />
+<meta property="og:url" content="http://linearalgebras.com/2B.html" />
+<meta property="og:site_name" content="Solutions to Linear Algebra Done Right 3rd Edition" />
+<meta property="article:tag" content="Chapter 2" />
+<meta property="article:tag" content="Solution" />
+<meta property="article:section" content="Linear Algebra" />
+<meta property="article:published_time" content="2014-12-07T15:53:58+00:00" />
+<meta property="article:modified_time" content="2015-05-09T11:11:19+00:00" />
+<meta property="og:updated_time" content="2015-05-09T11:11:19+00:00" />
+
+<title>Solutions to Linear Algebra Done Right 3rd Edition</title>
+
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+
+</head>
+
+<body>
+<h1>Solutions to Linear Algebra Done Right 3rd Edition</h1>
+
+<h2 align="right">Chapter 2 Exercise C</h2>
+<hr/>
+<p>1. Suppose $V$ is finite-dimensional and $U$ is a subspace of $V$ such that $\dim U=\dim V$. Prove that $U=V$.</p>
+<p>Solution: Let $u_1,u_2,\cdots,u_n$ be a basis of $U$. Thus $n=\dim U=\dim V$. Hence $u_1,u_2,\cdots,u_n$ is a linearly independent list of vectors in V with length $\dim V$. By 2.39, $u_1,u_2,\cdots,u_n$ is a basis of $V$. In particular, any vector in $V$ can be written as a linear combination of $u_1,u_2,\cdots,u_n$. As $u_i\in U$, it follows that $V\subset U$. This means that $U=V$.</p>
+<hr/>
+<p>2. Show that the subspaces of $\R^2$ are precisely $\{0\}$, $\R^2$, and all lines in $\R^2$ through the origin.</p>
+<p>Solution: The dimension of a subspace $U$ of $\R^2$ can only be 0,1,2. If $\dim U=0$, then $U=\{0\}$. If $\dim U=2$, then $U=\R^2$ by problem 1. If $\dim U=1$, then for any nonzero $x\in U$, it follows that \[U=\{kx:k\in\R\},\]which it is the line through $x$ and the origin.</p>
+<hr/>
+<p>3. Show that the subspaces of $\R^3$ are precisely $\{0\}$, $\R^3$ all lines in $\R^3$ through the origin, and all planes in $\R^3$ through the origin.</p>
+<p>Solution: It is similar to Problem 2. If $\dim U=2$, there exist two linearly independent $x,y\in\R^3$. Then \[U=\{k_1x+k_2y:k_1\in\R,k_2\in\R\},\]which it is the plane through $x$, $y$ and the origin.</p>
+<hr/>
+<p>4. (a) Let $U=\{p\in\ca P_4(\mb F):p(6)=0\}$. Find a basis of $U$.</p>
+<p>(b) Extend the basis in part (a) to a basis of $\ca P_4(\mb F)$.</p>
+<p>(c) Find a subspace $W$ of $\ca P_4(\mb F)$ such that $\ca P_4(\mb F)=U\oplus W$.</p>
+<p>Solution: (a) A basis of $U$ is $x-6$, $x^2-6x$, $x^3-6x^2$ and $x^4-6x^3$. Of course, $x-6$, $x^2-6x$, $x^3-6x^2$ and $x^4-6x^3$ is linearly independent since they has different degrees (It is easy to check). Moreover, if $p(6)=0$, then $p(x)$ is divided by $x-6$, hence \begin{align*}p(x)=&amp;(x-6)(k_3x^3+k_2x^2+k_1x+k_0)\\=&amp;k_3(x^4-6x^3)+k_2(x^3-6x^2)+k_1(x^2-6x)+k_0(x-6)\end{align*} is a linear combination of $x-6$, $x^2-6x$, $x^3-6x^2$ and $x^4-6x^3$.</p>
+<p>(b) Of course, $1$, $x-6$, $x^2-6x$, $x^3-6x^2$ and $x^4-6x^3$ is a basis of $\ca P_4(\mb F)$.</p>
+<p>(c) Let $W=\{c:c\in\mb F\}$, then $\ca P_4(\mb F)=U\oplus W$ by (b).</p>
+<hr/>
+<p>5. (a) Let $U=\{p\in\ca P_4(\mb R):p&#8221;(6)=0\}$. Find a basis of $U$.</p>
+<p>(b) Extend the basis in part (a) to a basis of $\ca P_4(\mb R)$.</p>
+<p>(c) Find a subspace $W$ of $\ca P_4(\mb R)$ such that $\ca P_4(\mb R)=U\oplus W$.</p>
+<p>Solution: (a) For polynomial $f(x)=ax^4+bx^3+cx^2+dx+e$, consider the condition when $f&#8221;(6)=0$. Then you will get a linear equation about $a,b,c,d,e$. Find a basis of the solution space of this linear equation. Then substitute it into $f(x)=ax^4+bx^3+cx^2+dx+e$, you will get a basis of $U$(why?). I skip the details and give a example of basis. $1$, $x$, $x^3-18x^2$, $x^4-12x^3$ is a basis of $U$.</p>
+<p>(b) Of course, $1$, $x$, $x^2$, $x^3-18x^2$ and $x^4-12x^3$ is a basis of $\ca P_4(\mb R)$.</p>
+<p>(c) Let $W=\{cx^2:c\in\mb R\}$, then $\ca P_4(\mb R)=U\oplus W$ by (b).</p>
+<hr/>
+<p>6.  (a) Let $U=\{p\in\ca P_4(\mb F):p(2)=p(5)\}$. Find a basis of $U$.</p>
+<p>(b) Extend the basis in part (a) to a basis of $\ca P_4(\mb F)$.</p>
+<p>(c) Find a subspace $W$ of $\ca P_4(\mb F)$ such that $\ca P_4(\mb F)=U\oplus W$.</p>
+<p>Solution: (a) For polynomial $f(x)=ax^4+bx^3+cx^2+dx+e$, consider the condition when $f(2)=f(5)$. Then you will get a linear equation about $a,b,c,d,e$. The dimension of the solution space of this linear equation is $4$, so is $U$(why?). Thus we only have to give $4$ linearly independent polynomials in $\ca P_4(\mb F)$ such that each of them attain the same value at $x=2$ and $x=5$. A good example is $1$, $x^2-7x+10$, $x(x^2-7x+10)$ and $x^2(x^2-7x+10)$.</p>
+<p>(b) Of course, $1$, $x$, $x^2-7x+10$, $x(x^2-7x+10)$ and $x^2(x^2-7x+10)$ is a basis of $\ca P_4(\mb F)$.</p>
+<p>(c) Let $W=\{cx:c\in\mb F\}$, then $\ca P_4(\mb F)=U\oplus W$ by (b).</p><hr/>
+<p>7. (a) Let $U=\{p\in\ca P_4(\mb F):p(2)=p(5)=p(6)\}$. Find a basis of $U$.</p>
+<p>(b) Extend the basis in part (a) to a basis of $\ca P_4(\mb F)$.</p>
+<p>(c) Find a subspace $W$ of $\ca P_4(\mb F)$ such that $\ca P_4(\mb F)=U\oplus W$.</p>
+<p>Solution: (a) For polynomial $f(x)=ax^4+bx^3+cx^2+dx+e$, consider the condition when $f(2)=f(5)=f(6)$. Then you will get $2$ linear equations about $a,b,c,d,e$. The dimension of the solution space of this linear equation is $3$, so is $U$(why?). Thus we only have to give $3$ linearly independent polynomials in $\ca P_4(\mb F)$ such that each of them attain the same value at $x=2$, $x=5$ and $x=6$. A good example is $1$, $(x-2)(x-5)(x-6)$ and $x(x-2)(x-5)(x-6)$.</p>
+<p>(b) Of course, $1$, $x$, $x^2$, $(x-2)(x-5)(x-6)$ and $x(x-2)(x-5)(x-6)$ is a basis of $\ca P_4(\mb F)$.</p>
+<p>(c) Let $W=\{cx+dx^2:c\in\mb F,d\in\mb F\}$, then $\ca P_4(\mb F)=U\oplus W$ by (b).</p><hr/>
+<p>8.  (a) Let $U=\{p\in\ca P_4(\mb R):\int_{-1}^1 p=0\}$. Find a basis of $U$.</p>
+<p>(b) Extend the basis in part (a) to a basis of $\ca P_4(\mb R)$.</p>
+<p>(c) Find a subspace $W$ of $\ca P_4(\mb R)$ such that $\ca P_4(\mb R)=U\oplus W$.</p>
+<p>Solution: (a) For polynomial $f(x)=ax^4+bx^3+cx^2+dx+e$, consider the condition when $\int_{-1}^1 f=0$. Then you will get a linear equation about $a,b,c,d,e$, which is $a/5+d/3+e=0$. Find a basis of the solution space of this linear equation. Then substitute it into $f(x)=ax^4+bx^3+cx^2+dx+e$, you will get a basis of $U$(why?). I skip the details and give a example of basis. $x$, $3x^2-1$, $x^3$ and $5x^4-1$ is a basis of $U$.</p>
+<p>(b) Of course, $1$, $x$, $3x^2-1$, $x^3$ and $5x^4-1$ is a basis of $\ca P_4(\mb R)$.</p>
+<p>(c) Let $W=\{c:c\in\mb R\}$, then $\ca P_4(\mb R)=U\oplus W$ by (b).</p>
+<hr/>
+<p>9. Suppose $v_1$, $\cdots$, $v_m$ is linearly independent in $V$ and $w\in V$. Prove that \[\dim\mathrm{span}(v_1+w,\cdots,v_m+w)\geqslant m-1.\]</p>
+<p>Solution: Note that \[v_2-v_1=(v_2+w)-(v_1+w),\]it follows that $v_2-v_1\in \mathrm{span}(v_1+w,\cdots,v_m+w)$. Similarly, $v_i-v_1\in \mathrm{span}(v_1+w,\cdots,v_m+w)$ for all $2\leqslant i\leqslant m$.</p>
+<p>Actually, $v_2-v_1$, $\cdots$, $v_m-v_1$ is linearly independent since $v_1$, $\cdots$, $v_m$ is linearly independent in $V$. (It is easy to prove, see examples in Exercise 2.A and 2.B). By 2.33, it follows that \[\dim\mathrm{span}(v_1+w,\cdots,v_m+w)\geqslant m-1.\]</p><hr/>
+<p>10. Suppose $p_0$, $p_1$, $\cdots$, $p_m$ $\in\ca P(\mb F)$ are such that each $p_j$ has degree $j$ . Prove that $p_0$, $p_1$, $\cdots$, $p_m$ is a basis of $\ca P_m(\mb F)$.</p>
+<p>Solution: Because $p_0$ has degree $0$, we have $\mathrm{span}(p_0)=\mathrm{span}(1)$. If we assume that \[ \mathrm{span}(p_0,p_1,\cdots,p_i)=\mathrm{span}(1,x,\cdots,x^i). \] Then by assumption, it is trivial that \[ \mathrm{span}(p_0,p_1,\cdots,p_i,p_{i+1})\subset \mathrm{span}(1,x,\cdots,x^i,x^{i+1}). \]On the other hand, $p_{i+1}$ has degree $i+1$, hence it can be written as \[p_{i+1}=a_{i+1}x^{i+1}+f_{i+1}(x),\]where $a_{i+1}\ne0$ and $\deg f_{i+1}(x)\leqslant i$. Then \[x^{i+1}=\frac{1}{a_{i+1}}(p_{i+1}-f_{i+1}(x))\in \mathrm{span}(1,x,\cdots,x^i,p_{i+1}).\]Note that $\mathrm{span}(p_0,p_1,\cdots,p_i)=\mathrm{span}(1,x,\cdots,x^i)$, we conclude \[\mathrm{span}(1,x,\cdots,x^i,p_{i+1})=\mathrm{span}(p_0,p_1,\cdots,p_i,p_{i+1}).\]Thus \[x^{i+1}\in \mathrm{span}(p_0,p_1,\cdots,p_i,p_{i+1}),\]then \[\mathrm{span}(1,x,\cdots,x^i,x^{i+1})\subset \mathrm{span}(p_0,p_1,\cdots,p_i,p_{i+1}).\] By induction, we have \[ \mathrm{span}(p_0,p_1,\cdots,p_i)=\mathrm{span}(1,x,\cdots,x^i). \]for all $0\leqslant i\leqslant m$. In particular, \[ \mathrm{span}(p_0,p_1,\cdots,p_m)=\mathrm{span}(1,x,\cdots,x^m) \]means $p_0$, $p_1$, $\cdots$, $p_m$ is a basis of $\ca P(\mb F)$. Because $p_0$, $p_1$, $\cdots$, $p_m$ is a spanning list of $\ca P(\mb F)$ with the same length as the dimension of $\ca P_m(\mb F)$ (2.42).</p><hr/>
+<p>11. Suppose that $U$ and $W$ are subspaces of $\mb R^8$ such that $\dim U=3$, $\dim W = 5$, and $U+W=\mb R^8$. Prove that $\mb R^8=U\oplus W$.</p>
+<p>Solution: By 2.43, we have \[\dim(U\cap W)=\dim U+\dim W-\dim(U+W)=8-\dim(\mb R^8)=0.\]Hence $U \cap W=\{0\}$, combining with $U+W=\mb R^8$, it follows that $\mb R^8=U\oplus W$.</p><hr/>
+<p>12. Suppose $U$ and $W$ are both five-dimensional subspaces of $\mb R^9$. Prove that $U \cap W\ne\{0\}$.</p>
+<p>Solution: By 2.43, we have \[\dim(U\cap W)=\dim U+\dim W-\dim(U+W)=10-\dim(U+W).\]Note that $U+W$ is a subspace of $\mb R^9$, it follows that $\dim(U+W)\leqslant 9$ (by 2.38). Hence $\dim(U\cap W)\geqslant 1$, i.e. $U \cap W\ne\{0\}$.</p><hr/>
+<p>13. Suppose $U$ and $W$ are both $4$-dimensional subspaces of $\mb C^6$. Prove that there exist two vectors in $U\cap W$ such that neither of these vectors is a scalar multiple of the other.</p>
+<p>Solution: By 2.43, we have \[\dim(U\cap W)=\dim U+\dim W-\dim(U+W)=8-\dim(U+W)\geqslant 8-\dim(\mb C^6)=2.\]Hence there exists $e_1, e_2\in U\cap W$ such that $e_1$ and $e_2$ are linearly independent. Then neither of $e_1$ or $e_2$ is a scalar multiple of the other.</p><hr/>
+<p>14. Suppose $U_1$, $\cdots$, $U_m$ are finite-dimensional subspaces of $V$. Prove that $U_1+\cdots+U_m$ is finite-dimensional and \[\dim(U_1+\cdots+U_m)\leqslant \dim U_1+\cdots+\dim U_m.\]</p>
+<p>Solution: Since $U_1+\cdots+U_m$ is a subspace of $V$ by 1.40, it follows that $\dim(U_1+\cdots+U_m)\leqslant\dim V$ by 2.38. Hence $U_1+\cdots+U_m$ is finite-dimensional. Now choose a basis $\ca W_i$ of $U_i$, then by definition of direct sum, $U_1+\cdots+U_m$ can be spanned by the gather of $\ca W_1$, $\cdots$, $\ca W_m$. From 2.31, we conclude \[\dim(U_1+\cdots+U_m)\leqslant \dim U_1+\cdots+\dim U_m,\]since the cardinality of the gather of $\ca W_1$, $\cdots$, $\ca W_m$ is no more than $\dim U_1+\cdots+\dim U_m$.</p><hr/>
+<p>15. Suppose $V$ is finite-dimensional, with $\dim V =n\geqslant 1$. Prove that there exist $1$-dimensional subspaces $U_1$, $\cdots$, $U_n$ of $V$ such that \[V=U_1\oplus \cdots \oplus U_n.\]</p>
+<p>Solution: Let $(v_1,\cdots,v_n)$ be a basis of $V$. For each $j$, let $U_j$ equal $\mathrm{span}(v_j)$; in other words, $U_j=\{av_j:a\in\mathbb F\}$. Because $(v_1,\cdots,v_n)$ is a basis of $V$, each vector in V can be written uniquely in the form \[a_1v_1+\cdots+a_nv_n,\]where $a_1$, $\cdots$, $a_n\in\mathbb F$. By definition of direct sum, this means that $V=U_1\oplus \cdots \oplus U_n$.</p><hr/>
+<p>16. Suppose $U_1$, $\cdots$, $U_m$ are finite-dimensional subspaces of $V$ such that $U_1+\cdots+U_m$ is a direct sum. Prove that $U_1\oplus \cdots \oplus U_m$ is finite dimensional and \[\dim U_1\oplus \cdots \oplus U_n\leqslant \dim U_1+\cdots+\dim U_m.\] [<em>The exercise above deepens the analogy between direct sums of subspaces and disjoint unions of subsets. Specifically, compare this exercise to the following obvious statement: if a set is written as a disjoint union of finite subsets, then the number of elements in the set equals the sum of the numbers of elements in the disjoint subsets</em>.]</p>
+<p>Solution: Since $U_1+\cdots+U_m$ is a direct sum, it follows that\[U_1\oplus \cdots \oplus U_m=U_1+\cdots+U_m.\]Hence, this is exactly the problem 14.</p><hr/>
+<p>17. You might guess, by analogy with the formula for the number of elements in the union of three subsets of a finite set, that if $U_1$, $U_2$, $U_3$ are subspaces of a finite-dimensional vector space, then \begin{align*}\dim(U_1+U_2+U_3)=&amp;\dim U_1+\dim U_2+\dim U_3\\ &amp;-\dim(U_1\cap U_2)-\dim (U_2\cap U_3)-\dim (U_3\cap U_1)\\ &amp;+\dim (U_1\cap U_2\cap U_3).\end{align*} Prove this or give a counterexample.</p>
+<p>Solution: To give a counterexample, let $V=\mb R^2$, and let \[U_1=\{(x,0):x\in\R\},\]\[U_2=\{(0,y):y\in\R\},\]\[U_3=\{(x,x):x\in\R\}.\]Then $U_1+U_2+U_3=\R^2$, so $\dim(U_1+U_2+U_3)=2$. However, \[\dim U_1=\dim U_2=\dim U_3=1\]and \[\dim(U_1\cap U_2)=\dim (U_2\cap U_3)=\dim (U_3\cap U_1)=\dim (U_1\cap U_2\cap U_3)=0.\]Thus in this case our guess would reduce to the formula $2=3$, which is obviously false.</p>
+<center><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- IH -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-5289197296725423"
+     data-ad-slot="8213787797"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></center>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'linearalg';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<script type="text/x-mathjax-config">
+                    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],scale: 90, linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50), },
+                    tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                     TeX: {  equationNumbers: {autoNumber: ["AMS"], useLabelIds: true},noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}",beqn:"\\begin{eqnarray}",eeqn:"\\end{equation}",beq:"\\begin{eqnarray}",eeq:"\\end{eqnarray}",be:"\\begin{equation}",ee:"\\end{eqnarray}",ca:"\\mathcal",m:"\\mathrm",mf:"\\mathbf",mb:"\\mathbb",N:"{\\mathbb{N}}",Z:"{\\mathbb{Z}}",R:"{\\mathbb{R}}",C:"{\\mathbb{C}}",vp:"{\\varphi}",e:"{\\epsilon}" } },
+                                        messageStyle: "none"
+                }); 
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+</script></script><script type='text/x-mathjax-config'>
+    MathJax.Hub.Config({
+        TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}},
+        "HTML-CSS": {linebreaks: {automatic: true}},
+        SVG: {linebreaks: {automatic: true}}
+    });
+</script>
+</body>
+</html>
