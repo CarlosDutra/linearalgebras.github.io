@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta name="description" content="Solutions to Linear Algebra Done Right 3rd version, Chapter 5, exercise B"/>
+<link rel="canonical" href="http://linearalgebras.com/5B.html" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Solutions to Linear Algebra Done Right Chapter 5 exercise B" />
+<meta property="og:description" content="Solutions to Linear Algebra Done Right 3rd version, Chapter 5, exercise B" />
+<meta property="og:url" content="http://linearalgebras.com/5B.html" />
+<meta property="og:site_name" content="Solutions to Linear Algebra Done Right 3rd Edition" />
+<meta property="article:tag" content="Chapter 5" />
+<meta property="article:tag" content="Solution" />
+<meta property="article:section" content="Linear Algebra" />
+<meta property="article:published_time" content="2014-12-07T15:53:58+00:00" />
+<meta property="article:modified_time" content="2015-05-09T11:11:19+00:00" />
+<meta property="og:updated_time" content="2015-05-09T11:11:19+00:00" />
+
+<title>Solutions to Linear Algebra Done Right 3rd Edition</title>
+
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+
+</head>
+
+<body>
+<h1>Solutions to Linear Algebra Done Right 3rd Edition</h1>
+
+<h2 align="right">Chapter 5 Exercise B</h2>
+<hr/>
+<p>1. Suppose $T\in\ca L(V)$ and there exists a positive integer $n$ such that $T^n=0$.</p>
+<p>(a) Prove that $I-T$ is invertible and that \[(I-T)^{-1}=I+T+\cdots+T^{n-1}.\] (b) Explain how you would guess the formula above.</p>
+<p>Solution: (a) Note that \[ (I-T)(I+T+\cdots+T^{n-1})=I-T^n=I \]and \[ (I+T+\cdots+T^{n-1})(I-T)=I-T^{n}=I ,\](in fact we just need to check only one) it follows that $I-T$ is invertible and \[(I-T)^{-1}=I+T+\cdots+T^{n-1}.\] (b) From the familiar formula \[1-x^n=(1-x)(1+x+\cdots+x^{n-1}).\]</p>
+<hr />
+<p>2. Suppose $T\in\ca L(V)$ and $(T-2I)(T-3I)(T-4I)=0$. Suppose $\lambda$ is an eigenvalue of $T$. Prove that $\lambda=2$ or $\lambda=3$ or $\lambda=4$.</p>
+<p>Solution: Let $v$ be an eigenvector of $T$ corresponding to $\lambda$, then we have $Tv=\lambda v$. Similarly, we have \[T^2v=T(\lambda v)=\lambda^2 v\quad T^3v=T(\lambda^2 v)=\lambda^3 v,\]and $T^nv=\lambda^n v$ for $n\in \mb N^+$. This implies for any polynomial $p$, we have $p(T)v=p(\lambda)v$. Hence \[0=(T-2I)(T-3I)(T-4I)v=(\lambda-2)(\lambda-3)(\lambda-4)v.\]As $v\ne 0$, it follows that \[(\lambda-2)(\lambda-3)(\lambda-4)=0.\]Thus $\lambda=2$ or $\lambda=3$ or $\lambda=4$.</p>
+<hr />
+<p>3. Suppose $T\in\ca L(V)$ and $T^2=I$ and $-1$ is not an eigenvalue of $T$. Prove that $T=I$.</p>
+<p>Solution: Note that for any $v\in V$, we have \begin{equation}\label{5BP31}v=\frac{1}{2}(v-Tv)+\frac{1}{2}(v+Tv).\end{equation} Since $T^2-I$, it follows that \[(T+I)\left(\frac{1}{2}(v-Tv)\right)=\frac{1}{2}(I-T^2)v=0.\]Hence $\frac{1}{2}(v-Tv)\in \m{null}(T+I)$.Similarly we have \[ \frac{1}{2}(v+Tv)\in \m{null}(T-I). \]By $(\ref{5BP31})$, it follows that $V=\m{null}(T-I)+\m{null}(T+I)$. However, $-1$ is not an eigenvalue of $T$. Hence $\m{null}(T+I)=\{0\}$. Thus $V=\m{null}(T-I)$. This implies $T=I$, since for any $v\in V$ we have $Tv-v=(T-I)v=0$.</p>
+<hr />
+<p>4. Suppose $T\in\ca L(V)$ and $P^2=P$. Prove that $V=\m{null}P\oplus \m{range}P$.</p>
+<p>Solution: Note that for any $v\in V$, we have \begin{equation}\label{5BP41} v=Pv+(v-Pv). \end{equation} It is clear that $Pv\in\m{range}P$. Since $P^2=P$, it follows that $P(v-Pv)=(P-P^2)v=0$. Thus $v-Pv\in\m{null}P$. By $(\ref{5BP41})$, we have $V=\m{null}P+ \m{range}P$. Suppose $v\in \m{null}P\cap \m{range}P$, then there exists $u\in V$ such that $Pu=v$. Moreover $Pv=0$. Hence\[0=Pv=P(Pu)=P^2u=Pu=v.\]This implies $\m{null}P\cap \m{range}P=\{0\}$. Therefore $V=\m{null}P\oplus \m{range}P$.</p>
+<hr />
+<p>5. Suppose $S,T\in\ca L(V)$ and $S$ is invertible. Suppose $p\in\ca P(\mb F)$ is a polynomial. Prove that \[p(STS^{-1})=Sp(T)S^{-1}.\]Solution: See <a title="Linear Algebra Done Right 2e Solutions Manual.pdf  " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 5 Problem 14.</p>
+<hr />
+<p>6. Suppose $T\in\ca L(V)$ and $U$ is a subspace of $V$ invariant under $T$. Prove that $U$ is invariant under $p(T)$ for every polynomial $p\in\ca P(\mb F)$.</p>
+<p>Solution: Note that $TU\subset U$, one can easily deduce $T^n U\subset U$ for any $n\in\mb N^+$ by induction. Hence $\lambda T^n U\subset U$ for any $\lambda\in\mb F$ since $U$ is a vector space. If we assume for any $p\in\ca P(\mb F)$ with $\deg p\le n-1$, $U$ is invariant under $p(T)$. Then we will show $U$ is invariant under $q(T)$ for every polynomial $q\in\ca P(\mb F)$ with $\deg q=n$. Let $q=\sum_{k=0}^n a_kx^k$, then \begin{align*} q(T)U=&amp;\left(\sum_{k=0}^n a_kT^k\right)U=\left(\sum_{k=0}^{n-1} a_kT^k\right)U+a_nT^nU\\ \subset&amp;U+U=U. \end{align*} Here $U+U=U$ by Problem 15 of Exercise 1C. Hence $U$ is invariant under $q(T)$ for every polynomial $q\in\ca P(\mb F)$ with $\deg q=n$. By induction, we conclude $U$ is invariant under $p(T)$ for every polynomial $p\in\ca P(\mb F)$.</p>
+<hr />
+<p>7. Suppose $T\in\ca L(V)$. Prove that $9$ is an eigenvalue of $T^2$ if and only if $3$ or $-3$ is an eigenvalue of $T$.</p>
+<p>Solution: By problem 2, we have $T^2v=\lambda^2v$ if $v$ be an eigenvector of $T$ corresponding to $\lambda$. Hence $3$ or $-3$ is an eigenvalue of $T$, then $9$ is an eigenvalue of $T^2$ since $3^2=9$ and $(-3)^2=9$. Conversely, if $9$ is an eigenvalue of $T^2$. It follows that $T^2-9I$ is not injective, namely $(T-3I)(T+3I)$ is not injective. By Problem 11 of Exercise 3B, we have $T-3I$ or $T+3I$ is not injective. Hence we conclude $3$ or $-3$ is an eigenvalue of $T$. <span style="color: #ff0000;">(My apologies for using 5.6, it is only true for finite-dimensional $V$.)</span></p>
+<hr />
+<p>8. Give an example of $T\in \ca L(\mb \R^2)$ such that $T^4=-I$.</p>
+<p>Solution: Denote $T\in \ca L(\mb \R^2)$ by \[T(x,y)=\left(\frac{\sqrt{2}}{2}x-\frac{\sqrt{2}}{2}y,\frac{\sqrt{2}}{2}x+\frac{\sqrt{2}}{2}y\right).\]You can directly check that $T^4=-I$.</p>
+<blockquote><p>Here I use a fact that \[ \left( \begin{array}{cc} \cos\theta &amp; \sin\theta \\ -\sin\theta &amp; \cos\theta \\ \end{array} \right)^n=\left( \begin{array}{cc} \cos n\theta &amp; \sin n\theta \\ -\sin n\theta &amp; \cos n\theta \\ \end{array} \right) \]</p></blockquote>
+<hr />
+<p>9. Suppose $V$ is finite-dimensional, $T\in\ca L(V)$, and $v\in V$ with $v\ne 0$. Let $p$ be a nonzero polynomial of smallest degree such that $p(T)v=0$. Prove that every zero of $p$ is an eigenvalue of $T$.</p>
+<p>Solution: By definition, an eigenvalue of $T$ must be contained in $\mb F$, hence we should assume that every zero of $p$ is in $\mb F$. Let $\lambda$ be a zero of $p$, then by 4.11 we have $p(z)=(z-\lambda)q(z)$, where $q(z)\in \ca P(\mb F)$. Suppose $\lambda$ is not an eigenvalue of $T$, then $T-\lambda I$ is injective. Hence \[0=p(T)v=(T-\lambda I)q(T)v\]implies $q(T)v=0$. However $\deg q&lt;\deg p$ and $q$ is nonzero(otherwise $p$ is zero). This contradicts with the choice of $p$. Thus every zero of $p$ is an eigenvalue of $T$.</p>
+<hr />
+<p>10. Suppose $T\in\ca L(V)$ and $v$ is an eigenvector of $T$ with eigenvalue $\lambda$. Suppose $p\in\ca P(\mb F)$. Prove that $p(T)v=p(\lambda)v$.</p>
+<p>Solution: By the proof of Problem 2, it follows that $T^nv=\lambda^n v$. Hence for $p\in P(\mb F)$, suppose \[p=\sum_{n=0}^ka_nx^n.\]Then \begin{align*} p(T)v=&amp;\left(\sum_{n=0}^ka_nT^n\right)v =\sum_{n=0}^ka_nT^nv =\sum_{n=0}^ka_n\lambda^nv=p(\lambda)v. \end{align*}</p>
+<hr />
+<p>11. Suppose $\mb F=\C$, $T\in\ca L(V)$, $p\in\ca P(\C)$ is a polynomial, and $\alpha\in \C$. Prove that $\alpha$ is an eigenvalue of $p(T)$ if and only if $\alpha=p(\lambda)$ for some eigenvalue $\lambda$ of $T$.</p>
+<p>Solution: See <a title="Linear Algebra Done Right 2e Solutions Manual.pdf  " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 5 Problem 15.</p>
+<hr />
+<p>12. Show that the result in the previous exercise does not hold if $\C$ is replaced with $\R$.</p>
+<p>Solution: See <a title="Linear Algebra Done Right 2e Solutions Manual.pdf  " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 5 Problem 16.</p>
+<hr />
+<p>13. Suppose $W$ is a complex vector space and $T\in\ca L(W)$ has no eigenvalues. Prove that every subspace of $W$ invariant under $T$ is either $\{0\}$ or infinite-dimensional.</p>
+<p>Solution: Suppose a subspace $U$ of $W$ invariant under $T$ and $\dim U&lt;\infty$. If $U\ne \{0\}$, then by 5.21, $T|_U$ has an eigenvalue with an eigenvector $v$($v\ne 0$). That is $T|_U(v)=\lambda v$, namely $Tv=\lambda v$. Note that $v\ne 0$, we conclude $T$ has an eigenvalue $\lambda$. We get a contradiction since $T\in\ca L(W)$ has no eigenvalues. Hence every subspace of $W$ invariant under $T$ is either $\{0\}$ or infinite-dimensional.</p>
+<hr />
+<p>14. Give an example of an operator whose matrix with respect to some basis contains only $0$&#8217;s on the diagonal, but the operator is invertible. [The exercise above and the exercise below show that 5.30 fails without the hypothesis that an upper-triangular matrix is under consideration.]</p>
+<p>Solution: See <a title="Linear Algebra Done Right 2e Solutions Manual.pdf  " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 5 Problem 18.</p>
+<hr />
+<p>15. Give an example of an operator whose matrix with respect to some basis contains only nonzero numbers on the diagonal, but the operator is not invertible.</p>
+<p>Solution: See <a title="Linear Algebra Done Right 2e Solutions Manual.pdf  " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 5 Problem 19.</p>
+<hr />
+<p>16. Rewrite the proof of 5.21 using the linear map that sends $p\in \ca P_n(\C)$ to $p(T)v\in V$ (and use 3.23).</p>
+<p>Solution: Define $\vp:\ca P_n(\C)\to V$ by $\vp(p)=p(T)v$, then $\vp$ is a linear map(check it). Note that $\dim \ca P_n(\C)=n+1$ and $\dim V=n$, it follows that $\vp$ is not injective by 3.23. Hence there exists a nonzero $p\in \ca P_n(\C)$ such that $p(T)v=0$. The remained is the same as 5.21.</p>
+<hr />
+<p>17. Rewrite the proof of 5.21 using the linear map that sends $p\in \ca P_{n^2}(\C)$ to $p(T)\in \ca L(V)$ (and use 3.23).</p>
+<p>Solution: Define $\vp:\ca P_{n^2}(\C)\to \ca L(V)$ by $\vp(p)=p(T)$, then $\vp$ is a linear map(check it). Note that $\dim \ca P_{n^2}(\C)=n^2+1$ and $\dim \ca L(V)=n^2$, it follows that $\vp$ is not injective by 3.23. Hence there exists a nonzero $p\in \ca P_n(\C)$ such that $p(T)=0$. This implies $p(T)v=0$. The remained is the same as 5.21.</p>
+<hr />
+<p>18. Suppose $V$ is a finite-dimensional complex vector space and $T\in\ca L(V)$. Define a function $f:\C\to\R$ by \[f(\lambda)= \dim \m{range}(T-\lambda I).\] Prove that $f$ is not a continuous function.</p>
+<p>Solution: Let $\lambda_0$ be an eigenvalue of $T$, then $T-\lambda_0I$ is not surjective by 5.6. Hence $\dim \m{range}(T-\lambda I)&lt;\dim V$. Note that $T$ has only finitely many eigenvalues, there exist a sequence of number $\lambda_n$ such that \[ \lim_{n\to\infty}\lambda_n=\lambda_0 \]and $\lambda_n$ are not eigenvalues of $T$. Then by 5.6, $T-\lambda_nI$ is surjective. Hence\[\dim \m{range}(T-\lambda_nI)=\dim V.\]This implies $\lambda_n\to\lambda_0$, but \[f(\lambda_0)\ne\lim_{n\to\infty}f(\lambda_n).\]Thus $f$ is not a continuous function.</p>
+<hr />
+<p>19. Suppose $V$ is finite-dimensional with $\dim V &gt;1$ and $T\in\ca L(V)$. Prove that \[\{p(T): p\in\ca P(\mb F)\}\ne\ca L(V).\]Solution: Note that $Tp(T)=p(T)T$, if $\{p(T): p\in\ca P(\mb F)\}=\ca L(V)$, then $ST = TS$ for every $S\in\ca L(V)$. By Problem 16 of Exercises 3D, it follows that $T$ is a scalar multiple of the identity. Suppose $T=\lambda I$, then \[ \{p(T): p\in\ca P(\mb F)\}=\{p(\lambda)I:p\in\ca P(\mb F)\}=\{\mu I:\mu\in\mb F\}. \]Since $\dim V&gt;1$, we have \[\dim \ca L(V)=(\dim V)^2\]and\[\dim\{p(T): p\in\ca P(\mb F)\}=1.\]Hence\[\{p(T): p\in\ca P(\mb F)\}\ne\ca L(V).\]</p>
+<hr />
+<p>20. Suppose $V$ is a finite-dimensional complex vector space and $T\in\ca L(V)$. Prove that $T$ has an invariant subspace of dimension $k$ for each $k= 1,\cdots,\dim V$.</p>
+<p>Solution: See <a title="Linear Algebra Done Right 2e Solutions Manual.pdf  " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 5 Problem 17.</p>
+<center><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- IH -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-5289197296725423"
+     data-ad-slot="8213787797"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></center><div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'linearalg';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<script type="text/x-mathjax-config">
+                    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],scale: 90, linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50), },
+                    tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                     TeX: {  equationNumbers: {autoNumber: ["AMS"], useLabelIds: true},noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}",beqn:"\\begin{eqnarray}",eeqn:"\\end{equation}",beq:"\\begin{eqnarray}",eeq:"\\end{eqnarray}",be:"\\begin{equation}",ee:"\\end{eqnarray}",ca:"\\mathcal",m:"\\mathrm",mf:"\\mathbf",mb:"\\mathbb",N:"{\\mathbb{N}}",Z:"{\\mathbb{Z}}",R:"{\\mathbb{R}}",C:"{\\mathbb{C}}",vp:"{\\varphi}",e:"{\\epsilon}" } },
+                                        messageStyle: "none"
+                }); 
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+</script></script><script type='text/x-mathjax-config'>
+    MathJax.Hub.Config({
+        TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}},
+        "HTML-CSS": {linebreaks: {automatic: true}},
+        SVG: {linebreaks: {automatic: true}}
+    });
+</script>
+</body>
+</html>
