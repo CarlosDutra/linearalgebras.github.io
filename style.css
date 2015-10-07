@@ -1,0 +1,76 @@
+@import url(https://fonts.googleapis.com/css?family=Alegreya);
+
+body {
+	margin-top: 0%;
+	margin-bottom: 6%;
+	margin-left: 3%;
+	margin-right: 3%;
+	background: #FEFEFE;
+	font-family: "Alegreya";
+}
+
+h1 {
+	font-size: 150%;
+	margin-top: 2%;
+	margin-bottom: 1%;
+}
+
+h2 {
+	font-size: 170%;
+	font-variant: small-caps;
+	margin-top: 2%;
+	margin-bottom: 0%;
+}
+
+h3 {
+	font-size: 130%;
+	font-style: normal;
+	margin-top: 1%;
+	margin-bottom: .7%;
+}
+
+h4 {
+	font-size: 110%;
+	font-style: normal;
+	margin-top: 1%;
+	margin-bottom: .7%;
+}
+
+ul {
+	margin-top: .7%;
+	margin-bottom: .7%;
+	margin-left: 0;
+	padding-left: 1.5em;
+}
+
+li {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #417FDA;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #ff4500;
+	border-bottom: 1px dotted #999999;
+}
+
+a:hover {
+	background: #EDEDED;
+}
+
+blockquote {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f5e9;
+    border: 3px double #e0d7bc;
+}
+
+hr {
+    border-width: 4px;
+    border-style: inset;
+}
