@@ -1,8 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
 
+<!doctype html>
+<html>
 <head>
+<meta charset="UTF-8">
 <meta name="description" content="Solutions to Linear Algebra Done Right 3rd version, Chapter 7, exercise C"/>
 <link rel="canonical" href="http://linearalgebras.com/7C.html" />
 <meta property="og:locale" content="en_US" />
@@ -17,28 +17,81 @@
 <meta property="article:published_time" content="2014-12-07T15:53:58+00:00" />
 <meta property="article:modified_time" content="2015-05-09T11:11:19+00:00" />
 <meta property="og:updated_time" content="2015-05-09T11:11:19+00:00" />
-
 <title>Solutions to Linear Algebra Done Right 3rd Edition</title>
-
-<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
-
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="stylesheet" type="text/css" href="jquery-ui.css" />
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery-ui.min.js"></script>
 </head>
 
 <body>
-<h1>Solutions to Linear Algebra Done Right 3rd Edition</h1>
+<div id="wrap">
+    <div id="header">
+        <img src="resolcone.png" />
+        <div id="title">
+            <h1>Solutions to Linear Algebra Done Right 3rd Edition</h1>
+            <h2 style="font-weight: normal;">May 18-21, 2015<br/>
+                Third Edition </h2>
+        </div>
+    </div>
+    
+    <div id="main">
+    
+    <div id="nav">
+        <ul>
+            <li ><a href="index.html">Homepage</a></li>
+            <li ><a href="1A.html">Exercises 1.A</a></li>
+            <li ><a href="1B.html">Exercises 1.B</a></li>
+            <li ><a href="1C.html">Exercises 1.C</a></li>
+            <li ><a href="2A.html">Exercises 2.A</a></li>
+            <li ><a href="2B.html">Exercises 2.B</a></li>
+            <li ><a href="2C.html">Exercises 2.C</a></li>
+            <li ><a href="3A.html">Exercises 3.A</a></li>
+            <li ><a href="3B.html">Exercises 3.B</a></li>
+            <li ><a href="3C.html">Exercises 3.C</a></li>
+            <li ><a href="3D.html">Exercises 3.D</a></li>
+            <li ><a href="3E.html">Exercises 3.E</a></li>
+            <li ><a href="3F.html">Exercises 3.F</a></li>
+            <li ><a href="4.html">Exercises 4</a></li>
+            <li ><a href="5A.html">Exercises 5.A</a></li>
+            <li ><a href="5B.html">Exercises 5.B</a></li>
+            <li ><a href="5C.html">Exercises 5.C</a></li>
+            <li ><a href="6A.html">Exercises 6.A</a></li>
+            <li ><a href="6B.html">Exercises 6.B</a></li>
+            <li ><a href="6C.html">Exercises 6.C</a></li>
+            <li ><a href="7A.html">Exercises 7.A</a></li>
+            <li ><a href="7B.html">Exercises 7.B</a></li>
+            <li class='selected'><a href="7C.html">Exercises 7.C</a></li>
+        </ul>
+    </div>
+        
+    <div id="content">
+    
 <h2 align="right">Chapter 7 Exercise C</h2>
 <hr/>
 <p>2. Suppose $T$ is a positive operator on $V$. Suppose $v,w\in V$ are such that \[Tv=w\quad\text{ and } \quad Tw=v.\] Prove that $v=w$.</p>
 <p>Solution: Note that $T$ is a positive operator on $V$, we have \begin{equation}\label{7CP2.1} \langle T(v-w),v-w\rangle\ge 0. \end{equation}On the other hand, \[Tv=w\quad\text{ and } \quad Tw=v\]imply that $T(v-w)=w-v$, hence \begin{equation}\label{7CP2.2}\langle T(v-w),v-w\rangle=-\langle v-w,v-w\rangle\le 0.\end{equation}Therefore $\langle v-w,v-w\rangle=0$ by (\ref{7CP2.1}) and (\ref{7CP2.2}), i.e. $v=w$.</p>
-<center><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- IH -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-5289197296725423"
-     data-ad-slot="8213787797"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script></center><div id="disqus_thread"></div>
+  </div>
+        <center>
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- IH -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-5289197296725423"
+                 data-ad-slot="8213787797">
+             </ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </center>
+
+    <div id="disqus_thread"></div>
+
+</div> <!-- close #main -->
+<div id="footer">
+    <div> 
+        <p>Please only read these solutions after you have already thought about it carefully. Do not just copy these solutions.</p>
+    </div>
+</div><!-- close #footer -->
+</div><!-- close #wrap -->
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = 'linearalg';

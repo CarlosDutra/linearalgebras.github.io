@@ -1,8 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
 
+<!doctype html>
+<html>
 <head>
+<meta charset="UTF-8">
 <meta name="description" content="Solutions to Linear Algebra Done Right 3rd version, Chapter 5, exercise C"/>
 <link rel="canonical" href="http://linearalgebras.com/5C.html" />
 <meta property="og:locale" content="en_US" />
@@ -17,16 +17,56 @@
 <meta property="article:published_time" content="2014-12-07T15:53:58+00:00" />
 <meta property="article:modified_time" content="2015-05-09T11:11:19+00:00" />
 <meta property="og:updated_time" content="2015-05-09T11:11:19+00:00" />
-
 <title>Solutions to Linear Algebra Done Right 3rd Edition</title>
-
-<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
-
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="stylesheet" type="text/css" href="jquery-ui.css" />
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery-ui.min.js"></script>
 </head>
 
 <body>
-<h1>Solutions to Linear Algebra Done Right 3rd Edition</h1>
-
+<div id="wrap">
+    <div id="header">
+        <img src="resolcone.png" />
+        <div id="title">
+            <h1>Solutions to Linear Algebra Done Right 3rd Edition</h1>
+            <h2 style="font-weight: normal;">May 18-21, 2015<br/>
+                Third Edition </h2>
+        </div>
+    </div>
+    
+    <div id="main">
+    
+    <div id="nav">
+        <ul>
+            <li ><a href="index.html">Homepage</a></li>
+            <li ><a href="1A.html">Exercises 1.A</a></li>
+            <li ><a href="1B.html">Exercises 1.B</a></li>
+            <li ><a href="1C.html">Exercises 1.C</a></li>
+            <li ><a href="2A.html">Exercises 2.A</a></li>
+            <li ><a href="2B.html">Exercises 2.B</a></li>
+            <li ><a href="2C.html">Exercises 2.C</a></li>
+            <li ><a href="3A.html">Exercises 3.A</a></li>
+            <li ><a href="3B.html">Exercises 3.B</a></li>
+            <li ><a href="3C.html">Exercises 3.C</a></li>
+            <li ><a href="3D.html">Exercises 3.D</a></li>
+            <li ><a href="3E.html">Exercises 3.E</a></li>
+            <li ><a href="3F.html">Exercises 3.F</a></li>
+            <li ><a href="4.html">Exercises 4</a></li>
+            <li ><a href="5A.html">Exercises 5.A</a></li>
+            <li ><a href="5B.html">Exercises 5.B</a></li>
+            <li class='selected'><a href="5C.html">Exercises 5.C</a></li>
+            <li ><a href="6A.html">Exercises 6.A</a></li>
+            <li ><a href="6B.html">Exercises 6.B</a></li>
+            <li ><a href="6C.html">Exercises 6.C</a></li>
+            <li ><a href="7A.html">Exercises 7.A</a></li>
+            <li ><a href="7B.html">Exercises 7.B</a></li>
+            <li ><a href="7C.html">Exercises 7.C</a></li>
+        </ul>
+    </div>
+        
+    <div id="content">
+    
 <h2 align="right">Chapter 5 Exercise C</h2>
 <hr/>
 <p>1. Suppose $T\in \ca L(V)$ is diagonalizable. Prove that $V=\m{null} T \oplus\m{range} T$.</p>
@@ -80,15 +120,27 @@
 <p>(e) Use part (d) to conclude that for each positive integer $n$, the Fibonacci number $F_n$ is the integer that is closest to \[\frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^n.\]Solution: (a) We show this part by induction. Note that \[T(0,1)=(1,1)=(F_1,F_2).\]Hence it is true for $n=1$. Suppose we have $T^n(0,1)=(F_n,F_{n+1})$ then \begin{align*} T^{n+1}(0,1)=&amp;T(T^n(0,1))=T(F_{n},F_{n+1})\\=&amp;(F_{n+1},F_n+F_{n+1})=(F_{n+1},F_{n+2}). \end{align*}Hence if it is true for $n$, so is the case for $n+1$. Thus we get the conclusion by induction.</p>
 <p>(b) and (c) We need solve this equation \[T(x,y)=\lambda(x,y),\]where $(x,y)\ne (0,0)$ and $\lambda\in \R$. By definition of $T$, it is equivalent to \[ \left\{ \begin{array}{ll} \lambda x=y,\\ \lambda y=x+y. \end{array} \right. \]If $y=0$, then $x=0$ by the second equation. Hence $y\ne 0$, it follows that $x\ne 0$ and $\lambda\ne 0$. By the first equation, we have $x/y=1/\lambda$. By the second one we have $\lambda=x/y+1$. Hence we have \[\lambda=\frac{1}{\lambda}+1,\]the solutions for this equation are \[\lambda=\frac{1\pm\sqrt{5}}{2}.\]By $x/y=1/\lambda$, we have the eigenvectors corresponding to $\dfrac{1\pm\sqrt{5}}{2}$ are $\left(1,\dfrac{1\pm\sqrt{5}}{2}\right)$ respectively.</p>
 <p>(d) Denote $\left(1,\dfrac{1+\sqrt{5}}{2}\right)$ and $\left(1,\dfrac{1-\sqrt{5}}{2}\right)$ by $e_1$ and $e_2$ respectively. Then we have \[(0,1)=\frac{1}{\sqrt{5}}(e_1-e_2).\]It follows that \begin{align*} T^n(0,1)=&amp;T^n\left(\frac{1}{\sqrt{5}}(e_1-e_2)\right)=\frac{1}{\sqrt{5}}(T^ne_1-T^ne_2)\\ =&amp;\frac{1}{\sqrt{5}}\left[\left(\dfrac{1+\sqrt{5}}{2}\right)^ne_1-\left(\dfrac{1-\sqrt{5}}{2}\right)^ne_2\right]. \end{align*} By (a) and comparing the first component, we deduce that \begin{equation}\label{5CP161}F_n= \frac{1}{\sqrt{5}}\left[\left(\frac{1+\sqrt{5}}{2}\right)^n-\left(\frac{1-\sqrt{5}}{2}\right)^n\right]. \end{equation}(e) Note that $\sqrt{5}\geqslant 2$, we have \begin{equation}\label{5CP162} \frac{1}{\sqrt{5}}\left|\frac{1-\sqrt{5}}{2}\right|^n= \frac{1}{\sqrt{5}}\left|\frac{2}{1+\sqrt{5}}\right|^n\le\frac{1}{2}\times\frac{2}{3}&lt;\frac{1}{2}. \end{equation} Moreover, $F_n\in\mb Z$ is easily shown by induction. Combining $(\ref{5CP161})$ and $(\ref{5CP162})$, it follows that \[ \left|\frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^n-F_n\right|=\frac{1}{\sqrt{5}}\left|\frac{1-\sqrt{5}}{2}\right|^n&lt;\frac{1}{2} \]By $F_n\in\mb Z$, we deduce that the Fibonacci number $F_n$ is the integer that is closest to \[\frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^n.\]</p>
-<center><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- IH -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-5289197296725423"
-     data-ad-slot="8213787797"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script></center><div id="disqus_thread"></div>
+  </div>
+        <center>
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- IH -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-5289197296725423"
+                 data-ad-slot="8213787797">
+             </ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </center>
+
+    <div id="disqus_thread"></div>
+
+</div> <!-- close #main -->
+<div id="footer">
+    <div> 
+        <p>Please only read these solutions after you have already thought about it carefully. Do not just copy these solutions.</p>
+    </div>
+</div><!-- close #footer -->
+</div><!-- close #wrap -->
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = 'linearalg';
