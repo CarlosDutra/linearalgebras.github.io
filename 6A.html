@@ -98,6 +98,10 @@
 <p>12. Prove that \[(x_1+\cdots+x_n)^2\le n(x_1^2+\cdots+x_n^2)\] for all positive integers $n$ and all real numbers $x_1,\cdots,x_n$.</p>
 <p>Solution: In Example 6.17 a), let $y_i=1$.</p>
 <hr />
+<p>15. Prove that \[\left(\sum_{j=1}^n a_jb_j\right)^2\leqslant \left(\sum_{j=1}^n ja_j^2\right)\left(\sum_{j=1}^n \frac{b_j^2}{j}\right)\]for all real numbers $a_1,\cdots,a_n$ and $b_1,\cdots,b_n$.</p>
+<p>Solution: Consider Example 6.17 (a). Let $x_j=\sqrt{j|a_j|}$ and $y_j=\sqrt{\frac{|b_j|}{j}}$ and note that 
+\[|a_1b_1+\cdots+a_nb_n|\leqslant \sum_{j=1}^n |a_jb_j|.\]</p>
+<hr />
 <p>16. Suppose $u,v\in V$ are such that \[\|u\|=3,\|u+v\|=4,\|u-v\|=6.\] What number does $\|v\|$ equal?</p>
 <p>Solution: Note that (&#8230;..After I finished this, I found that is exactly 6.22&#8230;) \begin{align*} &amp;\|u+v\|^2+\|u-v\|^2 \\ =&amp;\langle u+v,u+v\rangle +\langle u-v,u-v\rangle\\ =&amp;\langle u,u\rangle+\langle u,v\rangle+\langle v,u\rangle+\langle v,v\rangle+\langle u,u\rangle-\langle u,v\rangle-\langle v,u\rangle+\langle v,v\rangle\\ =&amp;2\langle u,u\rangle+2\langle v,v\rangle=2\|u\|^2+2\|v\|^2, \end{align*} it follows that \[2\times 3^2+2\|v\|^2=4^2+6^2.\]Hence $\|v\|=\sqrt{17}$.</p>
 <hr />
@@ -117,6 +121,9 @@
 <p>Solution: Positivity: $\langle u,u\rangle_1=\langle Su,Su\rangle\ge 0$ for all $u\in V$.</p>
 <p>Definiteness: $0=\langle u,u\rangle_1=\langle Su,Su\rangle$, hence $Su=0$. As $S$ is injective, it follows that $u=0$.</p>
 <p>Additivity in first slot: \begin{align*} \langle u+v,w\rangle_1=&amp;\langle S(u+v),Sw\rangle=\langle Su+Sv,Sw\rangle\\ =&amp;\langle Su,Sw\rangle+\langle Sv,Sw\rangle=\langle u,w\rangle_1+\langle v,w\rangle_1. \end{align*} Homogeneity in first slot: \begin{align*} \langle \lambda u,w\rangle_1=&amp;\langle S(\lambda u),Sw\rangle=\langle \lambda Su,Sw\rangle\\ =&amp;\lambda\langle Su,Sw\rangle=\lambda\langle u,w\rangle_1. \end{align*} Conjugate symmetry: $\langle u,v\rangle_1=\langle Su,Sv\rangle=\overline{\langle Sv,Su\rangle}=\overline{\langle v,u\rangle_1}$.</p>
+<hr />
+<p>25. Suppose $S\in\ca L(V)$ is not injective. Define $\langle u,v\rangle_1$ as in the exercise above. Explain why $\langle u,v\rangle_1$ is not an inner product on $V$.</p>
+<p>Solution: Note that $S\in\ca L(V)$ is not injective, there exists a nonzero $u\in V$ such that $Su=0$. Now we have $\langle u,u\rangle_1=\langle Su,Su\rangle=0$, this implies that $\langle u,v\rangle_1$ do not satisfy definiteness.<p/>
 <hr />
 <p>27. Suppose $u,v,w\in V$. Prove that \[\left\|w-\frac{1}{2}(u+v)\right\|^2=\frac{\|w-u\|^2+\|w-v\|^2}{2}-\frac{\|u-v\|^2}{4}.\]</p>
 <p>Solution: Let $a=w-u/2$ and $b=w-v/2$, by 6.22, we have \[ \|a-b\|^2+\|a+b\|^2=2\|a\|^2+2\|b\|^2. \]Plug $a=w-u/2$ and $b=w-v/2$ into the expression above, we get\[\left\|w-\frac{1}{2}(u+v)\right\|^2=\frac{\|w-u\|^2+\|w-v\|^2}{2}-\frac{\|u-v\|^2}{4}.\]</p>
