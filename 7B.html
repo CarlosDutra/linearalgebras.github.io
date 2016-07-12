@@ -76,7 +76,51 @@
 <p>5. Suppose $\mb F= \R$ and $T\in\ca L(V)$. Prove that $T$ is self-adjoint if and only if all pairs of eigenvectors corresponding to distinct eigenvalues of $T$ are orthogonal and \[V=E(\lambda_1,T)\oplus\cdots\oplus E(\lambda_m,T),\] where $\lambda_1$, $\cdots$, $\lambda_m$ denote the distinct eigenvalues of $T$.</p>
 <p>Solution: Suppose $T$ is self-adjoint, $v$ and $u$ are eigenvectors of $T$ corresponding to eigenvalues $\lambda$ and $\xi$ respectively, where $\lambda\ne \xi$. Then $T$ is self-adjoint \[ \langle Tv,u\rangle=\langle v,Tu\rangle, \]hence \[ \lambda \langle v,u\rangle=\xi\langle v,u\rangle. \]This implies $\langle v,u\rangle=0$ since $\lambda\ne \xi$. By 7.29 and 5.41, we have\[V=E(\lambda_1,T)\oplus\cdots\oplus E(\lambda_m,T),\] where $\lambda_1$, $\cdots$, $\lambda_m$ denote the distinct eigenvalues of $T$.</p>
 <p>Suppose all pairs of eigenvectors corresponding to distinct eigenvalues of $T$ are orthogonal and \[V=E(\lambda_1,T)\oplus\cdots\oplus E(\lambda_m,T),\] where $\lambda_1$, $\cdots$, $\lambda_m$ denote the distinct eigenvalues of $T$, then $V$ has an orthonormal basis consisting of eigenvectors of $T$. In fact, this basis can be chosen as the union of orthonormal basis of $E(\lambda_i,T)$, $i=1,\cdots,m$. Again by 7.29, we have $T$ is self-adjoint.</p>
-
+<hr />
+<p>6. Prove that a normal operator on a complex inner product space is selfadjoint if and only if all its eigenvalues are real. [<i>The exercise above strengthens the analogy (for normal operators) between self-adjoint operators and real numbers</i>.]</p>
+<p>Solution: See <a title="Linear Algebra Done Right Solution Manual " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 7 Problem 9.</p>
+<hr />
+<p>7. Suppose $V$ is a complex inner product space and $T\in \ca L(V)$ is a normal operator such that $T^9=T^8$. Prove that $T$ is self-adjoint and $T^2=T$.</p>
+<p>Solution: See <a title="Linear Algebra Done Right Solution Manual " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 7 Problem 10.</p>
+<hr />
+<p>8. Give an example of an operator $T$ on a complex vector space such that $T^9=T^8$ but $T^2\ne T$.</p>
+<p>Solution: Consider $T\in\ca L(\C^3)$. Let $e_1=(1,0,0)$, $e_2=(0,1,0)$ and $e_3=(0,0,1)$. Define $T$ such that\[Te_1=0,\quad Te_2=e_1,\quad Te_3=e_2.\]Then we have $T^3e_1=0$, $T^3e_2=T^2e_1=0$ and $T^3e_3=T^2e_2=Te_1=0$, i.e. $T^3=0$. It follows that $T^9=T^8$. On the other hand, we have $T^2e_2=Te_1=0$ and $Te_2=e_1$, it follows that $T^2\ne T$.</p>
+<hr />
+<p>9. Suppose $V$ is a complex inner product space. Prove that every normal operator on $V$ has a square root. (An operator $S\in\ca L(V)$ is called a square root of $T\in\ca L(V)$ if $S^2=T$.)</p>
+<p>Solution: See <a title="Linear Algebra Done Right Solution Manual " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 7 Problem 11.</p>
+<hr />
+<p>10. Give an example of a real inner product space $V$ and $T\in\ca L(V)$ and real numbers $b,c$ with $b^2 < 4c$ such that $T^2+bT+cI$ is not invertible. [<i>The exercise above shows that the hypothesis that $T$ is self-adjoint is
+needed in 7.26, even for real vector spaces.</i>]</p>
+<p>Solution: See <a title="Linear Algebra Done Right Solution Manual " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 7 Problem 12.</p>
+<hr />
+<p>11. Prove or give a counterexample: every self-adjoint operator on $V$ has a cube root. (An operator $S\in\ca L(V)$ is called a cube root of $T\in\ca L(V)$ if
+$S^3=T$.)</p>
+<p>Solution: See <a title="Linear Algebra Done Right Solution Manual " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 7 Problem 13.</p>
+<hr />
+<p>12. Suppose $T\in\ca L(V)$ is self-adjoint, $\lambda\in \mb F$, and 	$\epsilon > 0$. Suppose there exists $v\in V$ such that $\|v\|=1$ and\[\|Tv-\lambda v\|<\epsilon.\]Prove that $T$ has an eigenvalue $\lambda'$ such that $|\lambda-\lambda'|<\epsilon$.</p>
+<p>Solution: See <a title="Linear Algebra Done Right Solution Manual " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 7 Problem 14.</p>
+<hr />
+<p>14. Suppose $U$ is a finite-dimensional real vector space and $T\in\ca L(U)$. Prove that $U$ has a basis consisting of eigenvectors of $T$ if and only if there is an inner product on $U$ that makes $T$ into a self-adjoint operator.</p>
+<p>Solution: See <a title="Linear Algebra Done Right Solution Manual " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 7 Problem 15.</p>
+<hr />
+<p>15. Find the matrix entry below that is covered up.</p>
+<p>Solution: Let the entry be $x$. Then by definition we have\[\Bigl(\begin{smallmatrix}
+1 & 1 & 0\\ 
+0 & 1 & 1\\ 
+1 & 0 & x
+\end{smallmatrix}\Bigr)\Bigl(\begin{smallmatrix}
+1 & 0 & 1\\ 
+1 & 1 & 0\\ 
+0 & 1 & x
+\end{smallmatrix}\Bigr)=\Bigl(\begin{smallmatrix}
+1 & 0 & 1\\ 
+1 & 1 & 0\\ 
+0 & 1 & x
+\end{smallmatrix}\Bigr)\Bigl(\begin{smallmatrix}
+1 & 1 & 0\\ 
+0 & 1 & 1\\ 
+1 & 0 & x
+\end{smallmatrix}\Bigr).\]Consider the (1,3) entry of the two products, we get $x=1$.</p>
         <center>
             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- IH -->
