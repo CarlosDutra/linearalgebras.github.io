@@ -69,11 +69,20 @@
     
 <h2 align="right">Chapter 7 Exercise A</h2>
 <hr/>
+<p>1. Suppose $n$ is a positive integer. Define $T\in\ca L(\mathbb F^n)$ by 
+\[T(z_1,\cdots,z_n)=(0,z_1,\cdots,z_{n-1}).\]Find a formula for $T^*(z_1,\cdots,z_n)$.</p>
+<p>Solution: By definition, we have
+\[\begin{align*}\langle (z_1,\cdots,z_n),T^*(w_1,\cdots,w_n)\rangle=&\langle T(z_1,\cdots,z_n),(w_1,\cdots,w_n) \rangle
+\\=& z_1w_2+\cdots+z_{n-1}w_{n}=\langle (z_1,\cdots,z_n),(w_2,\cdots,w_n,0)\rangle.\end{align*}\]Therefore $T^*(w_1,\cdots,w_n)=(w_2,\cdots,w_n,0)$ or $T^*(z_1,\cdots,z_n)=(z_2,\cdots,z_n,0)$.</p>
+<p>See also <a title="Linear Algebra Done Right Solution Manual " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 6 Problem 27.</p>
+<hr/>
 <p>2. Suppose $T\in\ca L(V)$ and $\lambda\in\mb F$. Prove that $\lambda$ is an eigenvalue of $T$ if and only if $\bar\lambda$ is an eigenvalue of $T^*$.</p>
 <p>Solution: (This solution works for $\dim V&lt;\infty$, I am not sure whether $V$ is finite dimensional or not)Note that $(T^*)^*=T$, it suffices to show $\lambda$ is an eigenvalue of $T$ then $\bar\lambda$ is an eigenvalue of $T^*$. Let $v$ be a eigenvectors of $T$ corresponding to $\lambda$, then $Tv=\lambda v$. We have \begin{equation}\label{7AP1}0=((T-\lambda I)v,w)=(v,(T^*-\bar\lambda I)w)\end{equation}for all $w\in V$. If $\bar\lambda$ is not an eigenvalue of $T^*$, then $T^*-\bar\lambda I$ is surjective by 5.6. It follows that there exists some $\xi\in V$ such that $(T^*-\bar\lambda I)\xi=v$. By $(\ref{7AP1})$, we have \[0=(v,(T^*-\bar\lambda I)\xi)=(v,v).\]But $v\ne 0$ since $v$ is a eigenvectors, we get a contradiction. Hence we get the conclusion.</p>
+<p>Solution: See <a title="Linear Algebra Done Right Solution Manual " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 6 Problem 28.</p>
 <hr />
 <p>3. Suppose $T\in\ca L(V)$ and $U$ is a subspace of $V$. Prove that $U$ is invariant under $T$ if and only if $U^{\perp}$ is invariant under $T^*$.</p>
 <p>Solution: Let $u\in U$ and $w\in U^\perp$, then we have \begin{equation}\label{7AP1.1} \langle Tu,w\rangle=\langle u,T^*w\rangle. \end{equation} If $U$ is invariant under $T$, then $Tu\in U$ for all $u\in U$. Hence for a fixed $w\in U^\perp$, we have \[ 0=\langle Tu,w\rangle=\langle u,T^*w\rangle \]for all $u\in U$. This implies $T^*w\in U^{\perp}$. As $w$ is chosen arbitrarily, we conclude $U^{\perp}$ is invariant under $T^*$. The other direction is similar.</p>
+<p>Solution: See <a title="Linear Algebra Done Right Solution Manual " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 6 Problem 29.</p>
 <hr />
 <p>4. Suppose $T\in\ca L(V,W)$. Prove that</p>
 <p>(a) $T$ is injective if and only if $T^*$ is surjective;</p>
@@ -82,7 +91,24 @@
 <hr />
 <p>7. Suppose $S,T\in\ca L(V)$ are self-adjoint. Prove that $ST$ is self-adjoint if and only if $ST=TS$.</p>
 <p>Solution: We have $(ST)^*=T^*S^*$ by 7.6 (e). Hence $ST$ is self-adjoint if and only if \[T^*S^*=ST.\]Note that $S,T\in\ca L(V)$ are self-adjoint, we have $S^*=S$ and $T^*=T$. Therefore $ST$ is self-adjoint if and only if $T^*S^*=ST$, which is equivalent to $ST=TS$.</p>
-
+<hr />
+<p>8. Suppose $V$ is a real inner product space. Show that the set of self-adjoint operators on $V$ is a subspace of $\ca L(V)$.</p>
+<p>Solution: See <a title="Linear Algebra Done Right Solution Manual " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 7 Problem 3 (a).</p>
+<hr />
+<p>9. Suppose $V$ is a complex inner product space with $V\ne \{0\}$. Show that the set of self-adjoint operators on $V$ is not a subspace of $\ca L(V)$.</p>
+<p>Solution: See <a title="Linear Algebra Done Right Solution Manual " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 7 Problem 3 (b).</p>
+<hr />
+<p>10. Suppose $\dim V\geqslant 2$. Show that the set of normal operators on $V$ is not a subspace of $\ca L(V)$.</p>
+<p>Solution: See <a title="Linear Algebra Done Right Solution Manual " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 7 Problem 5.</p>
+<hr />
+<p>11. Suppose $P\in \ca L(V)$ is such that $P^2=P$. Prove that there is a subspace $U$ of $V$ such that $P=P_U$ if and only if $P$ is self-adjoint.</p>
+<p>Solution: See <a title="Linear Algebra Done Right Solution Manual " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 7 Problem 4.</p>
+<hr />
+<p>16. Suppose $T\in \ca L(V)$ is normal. Prove that\[\mathrm{range}~T=\mathrm{range}~T^*.\]</p>
+<p>Solution: See <a title="Linear Algebra Done Right Solution Manual " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 7 Problem 6.</p>
+<hr />
+<p>17. Suppose $T\in \ca L(V)$ is normal. Prove that\[\mathrm{null}~T^k=\mathrm{null}~T\quad\text{and}\quad\mathrm{range}~T^k=\mathrm{range}~T^*\]for every positive integer $k$.</p>
+<p>Solution: See <a title="Linear Algebra Done Right Solution Manual " href="https://math-test.googlecode.com/files/Linear%20Algebra%20Done%20Right%202e%20Solutions%20Manual.pdf" target="_blank">Linear Algebra Done Right Solution Manual</a> Chapter 7 Problem 7.</p>
         <center>
             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- IH -->
