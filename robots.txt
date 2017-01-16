@@ -1,0 +1,4 @@
+User-agent: * 
+Disallow: /tag/ 
+Disallow: /ch-* 
+Sitemap: http://linearalgebras.com/post-sitemap.xml
